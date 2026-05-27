@@ -1,26 +1,272 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+/* =========================================================================
+   LOGONES DESIGN TOKENS — issus de SITE_SPEC.md v1.0
+   ========================================================================= */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* === FONDS === (base RAL 5004 noir bleuâtre / RAL 9016 blanc) */
+  --color-bg-base: #1F1F2D;
+  --color-bg-surface: #2B2B3E;
+  --color-bg-elevated: #3A3A50;
+  --color-bg-light: #F1F0EA;
+  --color-bg-light-alt: #E5E4DE;
+
+  /* === TEXTES === */
+  --color-text-primary: #F1F0EA;
+  --color-text-secondary: #A5A3B0;
+  --color-text-muted: #6E6D7C;
+  --color-text-dark: #1F1F2D;
+  --color-text-dark-sec: #4A4A58;
+
+  /* === BORDURES === */
+  --color-border: rgba(241, 240, 234, 0.08);
+  --color-border-light: rgba(31, 31, 45, 0.14);
+
+  /* === MODULE CAISSE — BLEU ARDOISE === */
+  --caisse-deep: #0D2B45;
+  --caisse-mid: #1A5276;
+  --caisse-bright: #2E86C1;
+  --caisse-accent: #5DADE2;
+  --caisse-glow: rgba(46, 134, 193, 0.15);
+
+  /* === MODULE HACCP — VERT FORÊT === */
+  --haccp-deep: #0D2B1A;
+  --haccp-mid: #1A6B3C;
+  --haccp-bright: #2D9B5A;
+  --haccp-accent: #4DBF7A;
+  --haccp-glow: rgba(45, 155, 90, 0.15);
+
+  /* === MODULE RH — VIOLET PROFOND === */
+  --rh-deep: #1E1535;
+  --rh-mid: #3B2A6E;
+  --rh-bright: #5B4FBE;
+  --rh-accent: #8B7FE8;
+  --rh-glow: rgba(91, 79, 190, 0.15);
+
+  /* === MODULE RÉSERVATION — CORAIL === */
+  --resa-deep: #3D1F10;
+  --resa-mid: #C0622A;
+  --resa-bright: #E07840;
+  --resa-accent: #F0A070;
+  --resa-glow: rgba(224, 120, 64, 0.15);
+
+  /* === MODULE STOCKS — OCRE NEUTRE === */
+  --stocks-deep: #2A2010;
+  --stocks-mid: #7A6030;
+  --stocks-bright: #B8901A;
+  --stocks-accent: #D4A840;
+  --stocks-glow: rgba(184, 144, 26, 0.15);
+
+  /* === ORANGE LOGONES (identique au logo SVG officiel) === */
+  --gold-light: #FF7000;
+  --gold-mid: #CC5800;
+  --gold-pale: rgba(255, 112, 0, 0.12);
+
+  /* === SÉMANTIQUES === */
+  --color-success: #2D9B5A;
+  --color-warning: #D4A840;
+  --color-error: #C0392B;
+  --color-info: #2E86C1;
+
+  /* === RAYONS === */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+  --radius: var(--radius-md);
+
+  /* === OMBRES === */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 24px 80px rgba(0, 0, 0, 0.6), 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-glow-gold: 0 0 40px rgba(255, 112, 0, 0.25);
+  --shadow-glow-blue: 0 0 40px rgba(46, 134, 193, 0.2);
+  --shadow-glow-green: 0 0 40px rgba(45, 155, 90, 0.2);
+
+  /* === SHADCN aliases (pour les primitives déjà installées) === */
+  --background: var(--color-bg-base);
+  --foreground: var(--color-text-primary);
+  --card: var(--color-bg-surface);
+  --card-foreground: var(--color-text-primary);
+  --popover: var(--color-bg-elevated);
+  --popover-foreground: var(--color-text-primary);
+  --primary: var(--gold-light);
+  --primary-foreground: var(--color-bg-base);
+  --secondary: var(--color-bg-surface);
+  --secondary-foreground: var(--color-text-primary);
+  --muted: var(--color-bg-surface);
+  --muted-foreground: var(--color-text-secondary);
+  --accent: var(--color-bg-elevated);
+  --accent-foreground: var(--color-text-primary);
+  --destructive: var(--color-error);
+  --destructive-foreground: #fff;
+  --border: var(--color-border);
+  --input: var(--color-border);
+  --ring: var(--gold-light);
 }
 
 @theme inline {
+  /* Fonds */
+  --color-bg-base: var(--color-bg-base);
+  --color-bg-surface: var(--color-bg-surface);
+  --color-bg-elevated: var(--color-bg-elevated);
+  --color-bg-light: var(--color-bg-light);
+  --color-bg-light-alt: var(--color-bg-light-alt);
+
+  /* Textes */
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-dark: var(--color-text-dark);
+  --color-text-dark-sec: var(--color-text-dark-sec);
+
+  /* Modules */
+  --color-caisse-deep: var(--caisse-deep);
+  --color-caisse-mid: var(--caisse-mid);
+  --color-caisse-bright: var(--caisse-bright);
+  --color-caisse-accent: var(--caisse-accent);
+
+  --color-haccp-deep: var(--haccp-deep);
+  --color-haccp-mid: var(--haccp-mid);
+  --color-haccp-bright: var(--haccp-bright);
+  --color-haccp-accent: var(--haccp-accent);
+
+  --color-rh-deep: var(--rh-deep);
+  --color-rh-mid: var(--rh-mid);
+  --color-rh-bright: var(--rh-bright);
+  --color-rh-accent: var(--rh-accent);
+
+  --color-resa-deep: var(--resa-deep);
+  --color-resa-mid: var(--resa-mid);
+  --color-resa-bright: var(--resa-bright);
+  --color-resa-accent: var(--resa-accent);
+
+  --color-stocks-deep: var(--stocks-deep);
+  --color-stocks-mid: var(--stocks-mid);
+  --color-stocks-bright: var(--stocks-bright);
+  --color-stocks-accent: var(--stocks-accent);
+
+  /* Or */
+  --color-gold-light: var(--gold-light);
+  --color-gold-mid: var(--gold-mid);
+  --color-gold-pale: var(--gold-pale);
+
+  /* shadcn */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-poppins, system-ui, sans-serif);
+  --font-display: var(--font-fraunces, Georgia, serif);
+  --font-condensed: var(--font-anton, "Arial Narrow", sans-serif);
+  --font-handwritten: var(--font-caveat, cursive);
+  --font-mono: var(--font-geist-mono, ui-monospace, monospace);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+
+  --shadow-glow-gold: var(--shadow-glow-gold);
+  --shadow-glow-blue: var(--shadow-glow-blue);
+  --shadow-glow-green: var(--shadow-glow-green);
+
+  --animate-fade-up: fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 112, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(255, 112, 0, 0);
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Grain de texture overlay (noise SVG inline pour éviter un fichier asset) */
+.grain-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='200' height='200' filter='url(%23n)' opacity='0.5'/></svg>");
+}
+
+/* Ardoise: dégradé radial sombre simulant la pierre (RAL 5004) */
+.ardoise-bg {
+  background-color: var(--color-bg-base);
+  background-image:
+    radial-gradient(ellipse at 70% 30%, rgba(46, 134, 193, 0.08), transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(255, 112, 0, 0.06), transparent 50%),
+    linear-gradient(160deg, #2A2A3D 0%, #1F1F2D 60%, #15151E 100%);
+}
+
+/* Texture pierre claire pour sections lumineuses */
+.pierre-claire-bg {
+  background-color: var(--color-bg-light);
+  background-image:
+    radial-gradient(circle at 30% 40%, rgba(184, 144, 26, 0.04), transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(26, 82, 118, 0.03), transparent 50%);
+}
+
+/* Stagger animations */
+.stagger-children > * {
+  opacity: 0;
+  animation: fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 120ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 240ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 360ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 480ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 600ms; }
+.stagger-children > *:nth-child(7) { animation-delay: 720ms; }
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
