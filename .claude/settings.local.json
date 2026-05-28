@@ -5,7 +5,11 @@
       "Bash(npx --yes shadcn@latest add button card input label textarea checkbox badge separator accordion table sheet form --yes --overwrite)",
       "Bash(npm run *)",
       "Bash(npx --yes shadcn@latest add button card input label textarea checkbox badge separator accordion table sheet form switch select --yes --overwrite)",
-      "Bash(node -e \"const l = require\\('lucide-react'\\); console.log\\(Object.keys\\(l\\).filter\\(k => k.toLowerCase\\(\\).includes\\('linked'\\) || k.toLowerCase\\(\\).includes\\('insta'\\)\\).join\\('\\\\n'\\)\\)\")"
+      "Bash(node -e \"const l = require\\('lucide-react'\\); console.log\\(Object.keys\\(l\\).filter\\(k => k.toLowerCase\\(\\).includes\\('linked'\\) || k.toLowerCase\\(\\).includes\\('insta'\\)\\).join\\('\\\\n'\\)\\)\")",
+      "Bash(node -e \"console.log\\(require\\('next/package.json'\\).version\\)\")",
+      "Bash(node -e \"const p=require\\('./package.json'\\); const all={...p.dependencies,...p.devDependencies}; console.log\\(Object.keys\\(all\\).filter\\(k=>/mdx|gray-matter|remark|rehype|contentlayer/i.test\\(k\\)\\).join\\('\\\\n'\\)||'NONE'\\)\")",
+      "Bash(npx tsc *)",
+      "Bash(echo \"EXIT: $?\")"
     ]
   }
 }

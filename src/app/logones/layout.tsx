@@ -5,6 +5,7 @@ import { Footer } from "./components/layout/Footer";
 import { CookieBanner } from "./components/layout/CookieBanner";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://logones.fr"),
   title: {
     default:
       "Logones — Logiciel de caisse NF525 tout-en-un pour restaurateurs indépendants",

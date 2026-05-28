@@ -1,0 +1,18 @@
+export const STOCKS = {
+  bg: "#02060B",
+  bgSecondary: "#071016",
+  card: "#0A121A",
+  cardLighter: "#101923",
+  yellow: "#FFC400",
+  yellowDeep: "#F5A800",
+  yellowSoft: "rgba(255,196,0,0.16)",
+  yellowSofter: "rgba(255,196,0,0.08)",
+  orange: "#FFB000",
+  text: "#FFFFFF",
+  textSubtle: "rgba(255,255,255,0.72)",
+  textMuted: "rgba(255,255,255,0.52)",
+  border: "rgba(255,196,0,0.18)",
+  borderSoft: "rgba(255,255,255,0.06)",
+  red: "#EF4444",
+  green: "#22C55E",
+} as const;

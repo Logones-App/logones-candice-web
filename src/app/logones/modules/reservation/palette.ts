@@ -1,0 +1,21 @@
+export const RES = {
+  bg: "#02060B",
+  bgSecondary: "#071016",
+  card: "#0A121A",
+  cardLighter: "#0F1A24",
+  red: "#E02020",
+  redAccent: "#FF3030",
+  redDeep: "#7A1111",
+  redSoft: "rgba(255,48,48,0.16)",
+  redSofter: "rgba(255,48,48,0.08)",
+  text: "#FFFFFF",
+  textSubtle: "rgba(255,255,255,0.72)",
+  textMuted: "rgba(255,255,255,0.52)",
+  border: "rgba(255,48,48,0.18)",
+  borderSoft: "rgba(255,255,255,0.06)",
+  // Light section
+  lightBg: "#F6F1EA",
+  lightInk: "#111111",
+  lightInkSubtle: "rgba(17,17,17,0.70)",
+  green: "#22C55E",
+} as const;
