@@ -9,7 +9,26 @@
       "Bash(node -e \"console.log\\(require\\('next/package.json'\\).version\\)\")",
       "Bash(node -e \"const p=require\\('./package.json'\\); const all={...p.dependencies,...p.devDependencies}; console.log\\(Object.keys\\(all\\).filter\\(k=>/mdx|gray-matter|remark|rehype|contentlayer/i.test\\(k\\)\\).join\\('\\\\n'\\)||'NONE'\\)\")",
       "Bash(npx tsc *)",
-      "Bash(echo \"EXIT: $?\")"
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(git mv *)",
+      "Bash(taskkill /PID 38636 /F)",
+      "PowerShell($conns = Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction SilentlyContinue; if \\($conns\\) { $conns.OwningProcess | Select-Object -Unique | ForEach-Object { Write-Output \"Stopping PID $_\"; Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue } } else { Write-Output \"No listener on 3000\" }; try { Stop-Process -Id 38636 -Force -ErrorAction Stop; Write-Output \"Stopped 38636\" } catch { Write-Output \"38636 not running\" })",
+      "Bash(git rm *)",
+      "Bash(rmdir src/app/logones)",
+      "Bash(xargs -0 sed -i 's#@/app/logones/#@/app/#g')",
+      "Bash(xargs -0 sed -i 's#/logones/#/#g')",
+      "Bash(xargs -0 sed -i 's#\"/logones\"#\"/\"#g')",
+      "Bash(echo \"TSC EXIT: $?\")",
+      "Bash(curl -s -o /dev/null -w \"blog: %{http_code}\\\\n\" http://localhost:3000/blog)",
+      "Bash(curl -s -o /dev/null -w \"article: %{http_code}\\\\n\" http://localhost:3000/blog/rentabilite/cout-cache-logiciel-restaurant)",
+      "Bash(curl -s -o /dev/null -w \"theme: %{http_code}\\\\n\" http://localhost:3000/blog/rentabilite)",
+      "Bash(findstr /i \"Hero import\")",
+      "Bash(netstat -ano)",
+      "Bash(findstr \":3000 :3001\")",
+      "Bash(dir /b /s src\\\\app)",
+      "Bash(findstr /i \"globals.css tailwind theme\")",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s http://localhost:3000/)"
     ]
   }
 }
