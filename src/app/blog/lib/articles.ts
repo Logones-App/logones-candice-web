@@ -1,5 +1,6 @@
 import type { ComponentType } from "react";
 import { CoutCacheLogicielBody } from "../content/rentabilite/cout-cache-logiciel-restaurant";
+import { SixLogicielsCoutCacheBody } from "../content/digitalisation/6-logiciels-restaurant-cout-cache";
 
 export type Article = {
   theme: string; // slug du thème (URL)
@@ -33,9 +34,26 @@ export const THEME_LABELS: Record<string, string> = {
   "reglementation-chr": "Réglementation CHR",
   "logiciel-caisse": "Logiciel de caisse",
   "pilotage-multi-sites": "Pilotage multi-sites",
+  digitalisation: "Digitalisation",
 };
 
 export const ARTICLES: Article[] = [
+  {
+    theme: "digitalisation",
+    themeLabel: THEME_LABELS.digitalisation,
+    slug: "6-logiciels-restaurant-cout-cache",
+    title:
+      "Pourquoi avoir 6 logiciels différents coûte plus cher que ce que vous pensez ?",
+    excerpt:
+      "Caisse, HACCP, Excel, réservation, compta… Pris séparément, chaque logiciel paraît abordable. Le vrai coût se cache entre eux : ressaisies, erreurs, données contradictoires. Notre retour d'expérience.",
+    category: "Digitalisation",
+    readTime: "8 min",
+    publishedAt: "2026-06-02T16:00:00+02:00",
+    dateLabel: "2 juin 2026",
+    cover: "/images/Gemini_Generated_Image_v1tagev1tagev1ta.png",
+    author: "Candice et Philippe — Restaurateurs et co-fondateurs de Logones",
+    Content: SixLogicielsCoutCacheBody,
+  },
   {
     theme: "rentabilite",
     themeLabel: THEME_LABELS.rentabilite,

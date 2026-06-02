@@ -28,7 +28,10 @@
       "Bash(dir /b /s src\\\\app)",
       "Bash(findstr /i \"globals.css tailwind theme\")",
       "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:3000/)",
-      "Bash(curl -s http://localhost:3000/)"
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" \"http://localhost:3000/blog/digitalisation/6-logiciels-restaurant-cout-cache\")",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" \"http://localhost:3000/blog/digitalisation\")",
+      "Bash(curl -s \"http://localhost:3000/blog/digitalisation/6-logiciels-restaurant-cout-cache\")"
     ]
   }
 }

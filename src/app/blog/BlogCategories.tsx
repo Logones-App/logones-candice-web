@@ -9,6 +9,7 @@ import {
   Scale,
   Monitor,
   Building2,
+  Layers,
 } from "lucide-react";
 import { BLOG as C } from "./palette";
 import { getThemesWithArticles } from "./lib/articles";
@@ -23,6 +24,7 @@ const categories = [
   { icon: Scale, label: "Réglementation CHR", theme: "reglementation-chr" },
   { icon: Monitor, label: "Logiciel de caisse", theme: "logiciel-caisse" },
   { icon: Building2, label: "Pilotage multi-sites", theme: "pilotage-multi-sites" },
+  { icon: Layers, label: "Digitalisation", theme: "digitalisation" },
 ];
 
 export function BlogCategories() {
@@ -48,7 +50,7 @@ export function BlogCategories() {
           Explorez par thème
         </h2>
 
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-9">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
           {categories.map((cat) => {
             const hasArticles = themesWithArticles.has(cat.theme);
             const cardClass =
