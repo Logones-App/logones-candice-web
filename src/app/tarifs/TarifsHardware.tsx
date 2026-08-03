@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../lib/spacing";
 import { CreditCard, Printer, Tablet, Inbox, Monitor } from "lucide-react";
 import { TARIFS as C } from "./palette";
 
@@ -14,11 +15,11 @@ export function TarifsHardware() {
     <section
       style={{
         backgroundColor: C.card,
-        paddingBlock: "clamp(56px, 6vw, 80px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div
           className="relative overflow-hidden text-center"
           style={{
@@ -30,7 +31,7 @@ export function TarifsHardware() {
         >
           <p
             style={{
-              color: C.orange,
+              color: C.orangeOnPaper,
               fontSize: "12px",
               fontWeight: 900,
               letterSpacing: "0.14em",
@@ -44,18 +45,18 @@ export function TarifsHardware() {
             style={{
               fontSize: "clamp(24px, 3vw, 32px)",
               lineHeight: 1.15,
-              fontWeight: 850,
+              fontWeight: 900,
               color: C.text,
               marginBottom: "14px",
             }}
           >
             Logiciel{" "}
-            <span style={{ color: C.orange }}>sans matériel inclus.</span>
+            <span style={{ color: C.orangeOnPaper }}>sans matériel inclus.</span>
           </h2>
           <p
             style={{
               fontSize: "15px",
-              lineHeight: 1.65,
+              lineHeight: 1.6,
               color: C.textSubtle,
               maxWidth: "620px",
               margin: "0 auto 32px",
@@ -93,7 +94,7 @@ export function TarifsHardware() {
                 </span>
                 <span
                   style={{
-                    fontSize: "12.5px",
+                    fontSize: "13px",
                     fontWeight: 700,
                     color: C.text,
                   }}

@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -21,7 +22,7 @@ export function RhHero() {
       style={{
         backgroundColor: C.bg,
         minHeight: "740px",
-        paddingBlock: "120px clamp(56px, 6vw, 80px)",
+        paddingBlock: rhythm.hero,
       }}
     >
       {/* Background image — manager + équipe en service (full hero) */}
@@ -59,7 +60,7 @@ export function RhHero() {
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(ellipse at 30% 80%, rgba(255,112,0,0.10), transparent 45%)",
+            "radial-gradient(ellipse at 30% 80%, rgba(226,104,24,0.10), transparent 45%)",
         }}
         aria-hidden
       />
@@ -84,8 +85,8 @@ export function RhHero() {
       <div
         className="relative mx-auto"
         style={{
-          maxWidth: "1280px",
-          paddingInline: "clamp(20px, 3vw, 40px)",
+          maxWidth: container,
+          paddingInline: gutter,
         }}
       >
         <div className="grid items-center gap-12 lg:grid-cols-[48fr_52fr] lg:gap-14">
@@ -110,9 +111,9 @@ export function RhHero() {
 
             <h1
               style={{
-                fontSize: "clamp(42px, 6vw, 64px)",
-                lineHeight: 1.02,
-                fontWeight: 850,
+                fontSize: "clamp(40px, 6vw, 68px)",
+                lineHeight: 1.05,
+                fontWeight: 900,
                 color: C.text,
                 letterSpacing: "-0.02em",
                 marginBottom: "22px",
@@ -129,7 +130,7 @@ export function RhHero() {
 
             <p
               style={{
-                fontSize: "18px",
+                fontSize: "17px",
                 lineHeight: 1.6,
                 color: C.textSubtle,
                 maxWidth: "640px",
@@ -148,7 +149,7 @@ export function RhHero() {
                 style={{
                   height: "56px",
                   padding: "0 28px",
-                  background: `linear-gradient(135deg, #B989FF, ${C.violet}, ${C.violetDeep})`,
+                  background: `linear-gradient(135deg, ${C.buttonFrom}, ${C.buttonTo})`,
                   fontSize: "15px",
                   fontWeight: 800,
                   boxShadow:

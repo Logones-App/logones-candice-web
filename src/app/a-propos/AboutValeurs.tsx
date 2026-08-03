@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../lib/spacing";
 import { Eye, Headphones, Database, CheckCircle2 } from "lucide-react";
 import { ABOUT as C } from "./palette";
 
@@ -29,11 +30,11 @@ export function AboutValeurs() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(48px, 6vw, 80px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div
           className="relative overflow-hidden"
           style={{
@@ -54,7 +55,7 @@ export function AboutValeurs() {
               width: "560px",
               height: "320px",
               background:
-                "radial-gradient(ellipse, rgba(255,106,42,0.12), transparent 70%)",
+                "radial-gradient(ellipse, rgba(226,104,24,0.12), transparent 70%)",
               filter: "blur(24px)",
             }}
             aria-hidden
@@ -66,7 +67,7 @@ export function AboutValeurs() {
               color: C.orange,
               fontSize: "12px",
               fontWeight: 800,
-              letterSpacing: "0.18em",
+              letterSpacing: "0.14em",
               textTransform: "uppercase",
               marginBottom: "40px",
             }}
@@ -90,9 +91,9 @@ export function AboutValeurs() {
                   style={{
                     width: "44px",
                     height: "44px",
-                    background: "rgba(255,106,42,0.12)",
+                    background: "rgba(226,104,24,0.12)",
                     border: `1px solid ${C.orangeBorder}`,
-                    color: C.orange,
+                    color: C.orangeOnPaper,
                     marginBottom: "18px",
                   }}
                   aria-hidden
@@ -101,11 +102,11 @@ export function AboutValeurs() {
                 </span>
                 <h3
                   style={{
-                    fontSize: "16px",
+                    fontSize: "15px",
                     fontWeight: 800,
                     color: C.textOnDark,
                     marginBottom: "10px",
-                    lineHeight: 1.3,
+                    lineHeight: 1.25,
                   }}
                 >
                   {v.title}

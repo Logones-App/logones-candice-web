@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../lib/spacing";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -11,8 +12,8 @@ export function BlogHero() {
       style={{
         backgroundColor: C.bgDark,
         minHeight: "520px",
-        paddingBlock: "120px clamp(40px, 5vw, 64px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.hero,
+        paddingInline: gutter,
       }}
     >
       {/* Right photo */}
@@ -40,7 +41,7 @@ export function BlogHero() {
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(ellipse at 70% 50%, rgba(255,106,26,0.16), transparent 55%)",
+                "radial-gradient(ellipse at 70% 50%, rgba(226,104,24,0.16), transparent 55%)",
             }}
           />
         </div>
@@ -50,12 +51,12 @@ export function BlogHero() {
       <div
         className="pointer-events-none absolute inset-0 lg:hidden"
         style={{
-          background: `radial-gradient(circle at 70% 30%, rgba(255,106,26,0.16), transparent 55%), ${C.bgDark}`,
+          background: `radial-gradient(circle at 70% 30%, rgba(226,104,24,0.16), transparent 55%), ${C.bgDark}`,
         }}
         aria-hidden
       />
 
-      <div className="relative mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="relative mx-auto" style={{ maxWidth: container }}>
         <div className="max-w-[640px]">
           <p
             className="inline-block rounded-full"
@@ -65,7 +66,7 @@ export function BlogHero() {
               border: `1px solid ${C.orangeBorder}`,
               fontSize: "11px",
               fontWeight: 800,
-              letterSpacing: "0.16em",
+              letterSpacing: "0.14em",
               textTransform: "uppercase",
               padding: "6px 12px",
               marginBottom: "24px",
@@ -77,8 +78,8 @@ export function BlogHero() {
           <h1
             style={{
               fontSize: "clamp(36px, 5vw, 56px)",
-              lineHeight: 1.04,
-              fontWeight: 850,
+              lineHeight: 1.05,
+              fontWeight: 900,
               color: C.textOnDark,
               letterSpacing: "-0.02em",
               marginBottom: "22px",
@@ -109,15 +110,16 @@ export function BlogHero() {
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               href="#derniers-articles"
-              className="inline-flex items-center justify-center gap-2 rounded-full text-white transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 rounded-full transition-all hover:-translate-y-0.5"
               style={{
                 height: "54px",
                 padding: "0 28px",
                 background: `linear-gradient(135deg, ${C.orange}, ${C.orangeDeep})`,
+                color: "#1A0A00",
                 fontSize: "15px",
                 fontWeight: 800,
                 boxShadow:
-                  "0 14px 32px rgba(255,106,26,0.38), inset 0 1px 0 rgba(255,255,255,0.28)",
+                  "0 14px 32px rgba(226,104,24,0.38), inset 0 1px 0 rgba(255,255,255,0.28)",
               }}
             >
               Lire les derniers articles

@@ -12,13 +12,17 @@ import {
   BarChart3,
 } from "lucide-react";
 
-const ORANGE = "#FF7000";
-const RED = "#D71920";
-const RED_DASH = "#E53935";
-const CARD_BG = "#F2EDE7";
-const PAGE_BG = "#FAFAF8";
+import { brand, ground, onPaper, status } from "../../lib/tokens";
+
+const ORANGE = brand.orange;
+/** Variante lisible sur les cartes claires de cette bannière (5,01:1). */
+const ORANGE_INK = brand.orangeDeep;
+const RED = status.error.paper;
+const RED_DASH = status.error.paper;
+const CARD_BG = ground.paperAlt;
+const PAGE_BG = ground.paper;
 const CARD_INNER_BG = "#FFF7EF";
-const INK = "#05080D";
+const INK = onPaper.text;
 
 const fragmentedTools = [
   { icon: CreditCard, label: "Caisse" },
@@ -76,14 +80,14 @@ function LeftBlock() {
         className="uppercase leading-[1] tracking-[-0.01em]"
         style={{
           fontFamily: "var(--font-poppins), system-ui, sans-serif",
-          fontSize: "clamp(28px, 3.2vw, 38px)",
+          fontSize: "clamp(28px, 3.8vw, 42px)",
           fontWeight: 800,
           color: INK,
         }}
       >
         Trop d&apos;outils.
         <br />
-        <span style={{ color: ORANGE }}>Trop de pertes.</span>
+        <span style={{ color: ORANGE_INK }}>Trop de pertes.</span>
       </h3>
 
       <p
@@ -187,7 +191,7 @@ function RightBlock() {
         className="uppercase leading-[1] tracking-[-0.01em]"
         style={{
           fontFamily: "var(--font-poppins), system-ui, sans-serif",
-          fontSize: "clamp(28px, 3.2vw, 38px)",
+          fontSize: "clamp(28px, 3.8vw, 42px)",
           fontWeight: 800,
           color: INK,
         }}

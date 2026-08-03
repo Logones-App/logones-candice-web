@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../lib/spacing";
 import { Check, Minus } from "lucide-react";
 import { TARIFS as C } from "./palette";
 
@@ -60,15 +61,15 @@ export function TarifsMatrix() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(56px, 6vw, 80px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div className="text-center" style={{ marginBottom: "40px" }}>
           <p
             style={{
-              color: C.orange,
+              color: C.orangeOnPaper,
               fontSize: "12px",
               fontWeight: 900,
               letterSpacing: "0.14em",
@@ -80,14 +81,14 @@ export function TarifsMatrix() {
           </p>
           <h2
             style={{
-              fontSize: "clamp(28px, 3.6vw, 40px)",
-              lineHeight: 1.1,
-              fontWeight: 850,
+              fontSize: "clamp(28px, 3.8vw, 42px)",
+              lineHeight: 1.15,
+              fontWeight: 900,
               color: C.text,
             }}
           >
             Comparez toutes les{" "}
-            <span style={{ color: C.orange }}>fonctionnalités.</span>
+            <span style={{ color: C.orangeOnPaper }}>fonctionnalités.</span>
           </h2>
         </div>
 
@@ -117,7 +118,7 @@ export function TarifsMatrix() {
                       fontWeight: 800,
                       color: C.textOnDark,
                       padding: "18px 24px",
-                      letterSpacing: "0.02em",
+                      letterSpacing: "0.06em",
                     }}
                   >
                     Fonctionnalités
@@ -139,15 +140,15 @@ export function TarifsMatrix() {
                       <p
                         style={{
                           fontSize: "13px",
-                          fontWeight: 850,
-                          letterSpacing: "0.04em",
+                          fontWeight: 900,
+                          letterSpacing: "0.06em",
                         }}
                       >
                         {c.label}
                       </p>
                       <p
                         style={{
-                          fontSize: "10.5px",
+                          fontSize: "11px",
                           fontWeight: 600,
                           opacity:
                             "highlight" in c && c.highlight ? 0.95 : 0.65,
@@ -191,7 +192,7 @@ export function TarifsMatrix() {
                             borderTop: `1px solid ${C.borderSoft}`,
                             borderLeft: `1px solid ${C.borderSoft}`,
                             background: isHighlight
-                              ? "rgba(255,106,26,0.06)"
+                              ? "rgba(226,104,24,0.06)"
                               : "transparent",
                           }}
                         >
@@ -209,7 +210,7 @@ export function TarifsMatrix() {
         <p
           className="text-center"
           style={{
-            fontSize: "12.5px",
+            fontSize: "13px",
             color: C.textMuted,
             marginTop: "20px",
           }}
@@ -245,9 +246,9 @@ function Cell({ value, highlight }: { value: Cell; highlight: boolean }) {
       <span
         style={{
           fontSize: "12px",
-          fontWeight: 850,
+          fontWeight: 900,
           color: highlight ? C.orange : C.text,
-          letterSpacing: "0.04em",
+          letterSpacing: "0.06em",
         }}
         aria-label="Tous les modules"
       >

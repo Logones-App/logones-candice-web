@@ -1,3 +1,4 @@
+import { gutter, rhythm } from "../../lib/spacing";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Clock, CalendarDays, ArrowLeft, ArrowRight } from "lucide-react";
@@ -84,8 +85,8 @@ export function ArticleLayout({ article }: { article: Article }) {
       <header
         style={{
           backgroundColor: C.bgDark,
-          paddingBlock: "120px clamp(40px, 5vw, 56px)",
-          paddingInline: "clamp(20px, 3vw, 40px)",
+          paddingBlock: rhythm.hero,
+          paddingInline: gutter,
         }}
       >
         <div className="mx-auto" style={{ maxWidth: "820px" }}>
@@ -93,7 +94,7 @@ export function ArticleLayout({ article }: { article: Article }) {
           <nav
             aria-label="Fil d'Ariane"
             className="flex flex-wrap items-center gap-1.5"
-            style={{ fontSize: "12.5px", color: C.textOnDarkMuted, marginBottom: "24px" }}
+            style={{ fontSize: "13px", color: C.textOnDarkMuted, marginBottom: "24px" }}
           >
             <Link href="/blog" style={{ color: C.textOnDarkSubtle }}>
               Blog
@@ -114,9 +115,9 @@ export function ArticleLayout({ article }: { article: Article }) {
           <span
             className="inline-flex w-fit items-center rounded-full"
             style={{
-              fontSize: "10.5px",
+              fontSize: "11px",
               fontWeight: 900,
-              letterSpacing: "0.12em",
+              letterSpacing: "0.14em",
               textTransform: "uppercase",
               color: "#FFFFFF",
               background: C.orange,
@@ -129,9 +130,9 @@ export function ArticleLayout({ article }: { article: Article }) {
 
           <h1
             style={{
-              fontSize: "clamp(30px, 4.4vw, 46px)",
-              lineHeight: 1.1,
-              fontWeight: 850,
+              fontSize: "clamp(28px, 3.8vw, 42px)",
+              lineHeight: 1.15,
+              fontWeight: 900,
               color: C.textOnDark,
               letterSpacing: "-0.02em",
               marginBottom: "18px",
@@ -142,7 +143,7 @@ export function ArticleLayout({ article }: { article: Article }) {
 
           <p
             style={{
-              fontSize: "18px",
+              fontSize: "17px",
               lineHeight: 1.6,
               color: C.textOnDarkSubtle,
               marginBottom: "26px",
@@ -175,7 +176,7 @@ export function ArticleLayout({ article }: { article: Article }) {
         <div
           style={{
             backgroundColor: C.bgDark,
-            paddingInline: "clamp(20px, 3vw, 40px)",
+            paddingInline: gutter,
           }}
         >
           <div className="mx-auto" style={{ maxWidth: "980px" }}>
@@ -205,7 +206,7 @@ export function ArticleLayout({ article }: { article: Article }) {
       <div
         style={{
           paddingBlock: `${article.cover ? "80px" : "48px"} clamp(48px, 6vw, 80px)`,
-          paddingInline: "clamp(20px, 3vw, 40px)",
+          paddingInline: gutter,
         }}
       >
         <div className="mx-auto" style={{ maxWidth: "820px" }}>
@@ -217,7 +218,7 @@ export function ArticleLayout({ article }: { article: Article }) {
       <div
         style={{
           paddingBottom: "clamp(48px, 6vw, 80px)",
-          paddingInline: "clamp(20px, 3vw, 40px)",
+          paddingInline: gutter,
         }}
       >
         <div className="mx-auto" style={{ maxWidth: "820px" }}>
@@ -231,8 +232,8 @@ export function ArticleLayout({ article }: { article: Article }) {
           >
             <h2
               style={{
-                fontSize: "clamp(22px, 2.8vw, 30px)",
-                fontWeight: 850,
+                fontSize: "clamp(24px, 3vw, 32px)",
+                fontWeight: 900,
                 color: C.textOnDark,
                 marginBottom: "12px",
                 lineHeight: 1.15,
@@ -255,15 +256,16 @@ export function ArticleLayout({ article }: { article: Article }) {
             <div className="flex flex-wrap justify-center gap-3">
               <Link
                 href="/demo"
-                className="inline-flex items-center justify-center gap-2 rounded-full text-white transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 rounded-full transition-all hover:-translate-y-0.5"
                 style={{
                   height: "50px",
                   padding: "0 26px",
                   background: `linear-gradient(135deg, ${C.orange}, ${C.orangeDeep})`,
+                  color: "#1A0A00",
                   fontSize: "15px",
                   fontWeight: 800,
                   boxShadow:
-                    "0 12px 28px rgba(255,106,26,0.35), inset 0 1px 0 rgba(255,255,255,0.28)",
+                    "0 12px 28px rgba(226,104,24,0.35), inset 0 1px 0 rgba(255,255,255,0.28)",
                 }}
               >
                 Demander une démo
@@ -293,7 +295,7 @@ export function ArticleLayout({ article }: { article: Article }) {
       <div
         style={{
           paddingBottom: "clamp(48px, 6vw, 80px)",
-          paddingInline: "clamp(20px, 3vw, 40px)",
+          paddingInline: gutter,
         }}
       >
         <div className="mx-auto" style={{ maxWidth: "820px" }}>
@@ -302,7 +304,7 @@ export function ArticleLayout({ article }: { article: Article }) {
               <h2
                 style={{
                   fontSize: "20px",
-                  fontWeight: 850,
+                  fontWeight: 900,
                   color: C.text,
                   marginBottom: "18px",
                 }}
@@ -324,9 +326,9 @@ export function ArticleLayout({ article }: { article: Article }) {
                   >
                     <span
                       style={{
-                        fontSize: "10.5px",
+                        fontSize: "11px",
                         fontWeight: 800,
-                        letterSpacing: "0.08em",
+                        letterSpacing: "0.06em",
                         textTransform: "uppercase",
                         color: C.orange,
                       }}
@@ -337,7 +339,7 @@ export function ArticleLayout({ article }: { article: Article }) {
                       style={{
                         fontSize: "15px",
                         fontWeight: 800,
-                        lineHeight: 1.3,
+                        lineHeight: 1.25,
                         color: C.text,
                         marginTop: "8px",
                       }}

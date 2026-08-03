@@ -20,7 +20,7 @@ function InstagramIcon({ className }: { className?: string }) {
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#07111F]">
+    <footer className="border-t border-white/10 bg-bg-base">
       <div className="mx-auto grid max-w-[1280px] gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr] lg:px-10">
         {/* Colonne identité */}
         <div>

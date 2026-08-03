@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import Link from "next/link";
 import {
   CalendarClock,
@@ -30,13 +31,13 @@ export function RhDonneesEtTarif() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(28px, 4vw, 48px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.compact,
+        paddingInline: gutter,
       }}
     >
       <div
         className="mx-auto grid gap-6 lg:grid-cols-2 lg:gap-7"
-        style={{ maxWidth: "1280px" }}
+        style={{ maxWidth: container }}
       >
         <DonneesBlock />
         <TarifBlock />
@@ -90,9 +91,9 @@ function DonneesBlock() {
         </p>
         <h2
           style={{
-            fontSize: "clamp(24px, 3vw, 34px)",
+            fontSize: "clamp(24px, 3vw, 32px)",
             lineHeight: 1.15,
-            fontWeight: 850,
+            fontWeight: 900,
             color: C.text,
             marginBottom: "24px",
           }}
@@ -204,7 +205,7 @@ function TarifBlock() {
           width: "260px",
           height: "260px",
           background:
-            "radial-gradient(circle, rgba(255,112,0,0.18), transparent 65%)",
+            "radial-gradient(circle, rgba(226,104,24,0.18), transparent 65%)",
         }}
         aria-hidden
       />
@@ -224,9 +225,9 @@ function TarifBlock() {
         </p>
         <h2
           style={{
-            fontSize: "clamp(24px, 3vw, 34px)",
+            fontSize: "clamp(24px, 3vw, 32px)",
             lineHeight: 1.15,
-            fontWeight: 850,
+            fontWeight: 900,
             color: C.text,
             marginBottom: "10px",
           }}
@@ -276,7 +277,7 @@ function TarifBlock() {
               style={{
                 gridTemplateColumns: "1.4fr 1fr 1fr",
                 padding: "11px 14px",
-                fontSize: "12.5px",
+                fontSize: "13px",
                 borderBottom:
                   i === tarifRows.length - 1
                     ? "none"
@@ -311,16 +312,16 @@ function TarifBlock() {
         <div
           className="mt-5 flex items-center justify-between gap-4 rounded-2xl"
           style={{
-            background: `linear-gradient(135deg, rgba(255,112,0,0.22), rgba(204,88,0,0.12))`,
-            border: `1px solid rgba(255,112,0,0.40)`,
+            background: `linear-gradient(135deg, rgba(226,104,24,0.22), rgba(204,88,0,0.12))`,
+            border: `1px solid rgba(226,104,24,0.40)`,
             padding: "16px 20px",
-            boxShadow: "0 14px 32px rgba(255,112,0,0.18)",
+            boxShadow: "0 14px 32px rgba(226,104,24,0.18)",
           }}
         >
           <p
             style={{
-              fontSize: "13.5px",
-              lineHeight: 1.4,
+              fontSize: "14px",
+              lineHeight: 1.45,
               color: C.text,
               fontWeight: 700,
             }}
@@ -331,13 +332,14 @@ function TarifBlock() {
           </p>
           <Link
             href="/tarifs"
-            className="inline-flex items-center gap-1.5 rounded-full text-white shrink-0"
+            className="inline-flex items-center gap-1.5 rounded-full shrink-0"
             style={{
               fontSize: "13px",
               fontWeight: 800,
               background: `linear-gradient(135deg, ${C.orangeLight}, ${C.orange}, ${C.orangeDeep})`,
+              color: "#1A0A00",
               padding: "10px 18px",
-              boxShadow: "0 10px 24px rgba(255,112,0,0.30)",
+              boxShadow: "0 10px 24px rgba(226,104,24,0.30)",
             }}
           >
             Voir nos tarifs

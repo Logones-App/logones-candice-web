@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import Link from "next/link";
 import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
@@ -19,32 +20,20 @@ import {
   Nfc,
 } from "lucide-react";
 
-const C = {
-  bg: "#02060B",
-  blue: "#147CFF",
-  blueDeep: "#005BFF",
-  cardDark: "#06111D",
-  cardSecondary: "#071523",
-  text: "#FFFFFF",
-  textSubtle: "rgba(255,255,255,0.68)",
-  textBright: "rgba(255,255,255,0.82)",
-  textMuted: "rgba(255,255,255,0.50)",
-  border: "rgba(20,124,255,0.18)",
-  borderSoft: "rgba(255,255,255,0.07)",
-};
+import { CAISSE as C } from "./palette";
 
 export function CaisseSettingsAndCta() {
   return (
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(32px, 4vw, 48px)",
-        paddingInline: "clamp(20px, 3vw, 32px)",
+        paddingBlock: rhythm.compact,
+        paddingInline: gutter,
       }}
     >
       <div
         className="mx-auto flex flex-col gap-6"
-        style={{ maxWidth: "1280px" }}
+        style={{ maxWidth: container }}
       >
         <SettingsBlock />
         <CtaFinalBlock />
@@ -108,9 +97,9 @@ function SettingsBlock() {
         <h2
           style={{
             color: C.text,
-            fontSize: "clamp(28px, 4vw, 42px)",
+            fontSize: "clamp(28px, 3.8vw, 42px)",
             lineHeight: 1.05,
-            fontWeight: 850,
+            fontWeight: 900,
             marginBottom: "22px",
           }}
         >
@@ -121,8 +110,8 @@ function SettingsBlock() {
         <p
           style={{
             color: "rgba(255,255,255,0.72)",
-            fontSize: "16px",
-            lineHeight: 1.65,
+            fontSize: "15px",
+            lineHeight: 1.6,
             maxWidth: "520px",
             marginBottom: "24px",
           }}
@@ -147,7 +136,7 @@ function SettingsBlock() {
               style={{
                 gap: "12px",
                 fontSize: "15px",
-                fontWeight: 650,
+                fontWeight: 700,
                 color: C.textBright,
               }}
             >
@@ -229,7 +218,7 @@ function SettingsMockup() {
                 ? "rgba(20,124,255,0.14)"
                 : "transparent",
               color: item.active ? C.text : C.textMuted,
-              fontSize: "10.5px",
+              fontSize: "11px",
               fontWeight: item.active ? 700 : 500,
             }}
           >
@@ -258,7 +247,7 @@ function SettingsMockup() {
               fontSize: "13px",
               fontWeight: 800,
               color: C.text,
-              lineHeight: 1.2,
+              lineHeight: 1.25,
             }}
           >
             Paramètres de la caisse
@@ -270,7 +259,7 @@ function SettingsMockup() {
               backgroundColor: C.blue,
               color: C.text,
               padding: "6px 10px",
-              fontSize: "10.5px",
+              fontSize: "11px",
               fontWeight: 800,
               boxShadow: "0 4px 12px rgba(20,124,255,0.30)",
             }}
@@ -310,7 +299,7 @@ function SettingsMockup() {
                 gridTemplateColumns: "1fr 80px 100px",
                 minHeight: "32px",
                 borderBottom: "1px solid rgba(255,255,255,0.06)",
-                fontSize: "10.5px",
+                fontSize: "11px",
                 color: "rgba(255,255,255,0.76)",
               }}
             >
@@ -451,9 +440,9 @@ function CtaFinalBlock() {
           <h2
             style={{
               color: C.text,
-              fontSize: "clamp(28px, 4vw, 40px)",
-              lineHeight: 1.08,
-              fontWeight: 850,
+              fontSize: "clamp(28px, 3.8vw, 42px)",
+              lineHeight: 1.15,
+              fontWeight: 900,
               marginBottom: "18px",
             }}
           >
@@ -463,7 +452,7 @@ function CtaFinalBlock() {
             style={{
               color: "rgba(255,255,255,0.74)",
               fontSize: "17px",
-              lineHeight: 1.5,
+              lineHeight: 1.45,
               maxWidth: "560px",
               marginBottom: "30px",
             }}
@@ -479,9 +468,9 @@ function CtaFinalBlock() {
               style={{
                 height: "56px",
                 padding: "0 30px",
-                background: `linear-gradient(135deg, ${C.blue}, ${C.blueDeep})`,
+                background: `linear-gradient(135deg, ${C.buttonFrom}, ${C.buttonTo})`,
                 fontSize: "15px",
-                fontWeight: 850,
+                fontWeight: 900,
                 boxShadow: "0 16px 35px rgba(20,124,255,0.38)",
                 border: "1px solid rgba(255,255,255,0.10)",
               }}
@@ -498,7 +487,7 @@ function CtaFinalBlock() {
                 background: "rgba(255,255,255,0.04)",
                 border: "1px solid rgba(255,255,255,0.28)",
                 fontSize: "15px",
-                fontWeight: 850,
+                fontWeight: 900,
                 backdropFilter: "blur(10px)",
               }}
             >

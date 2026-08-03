@@ -15,12 +15,14 @@ import {
   MapPin,
 } from "lucide-react";
 
+import { brand, ground, onNight, onPaper } from "../../lib/tokens";
+
 /* ===== Charte ===== */
-const NAVY = "#07111F";
-const ORANGE = "#FF5A1F";
-const OFFWHITE = "#F7F3EC";
-const INK_MUTED = "#51607A";
-const TXT_ON_NAVY = "#D6DCE8";
+const NAVY = ground.night;
+const ORANGE = brand.orange;
+const OFFWHITE = ground.paper;
+const INK_MUTED = onPaper.muted;
+const TXT_ON_NAVY = onNight.subtle;
 
 /* ===== Données ===== */
 const pilotageList = [
@@ -211,7 +213,7 @@ function PilotageTempsReel() {
       className="relative isolate overflow-hidden"
       style={{
         background:
-          "radial-gradient(ellipse at 72% -10%, rgba(255,90,31,0.12), transparent 55%), linear-gradient(180deg, #07111F 0%, #0A1626 100%)",
+          "radial-gradient(ellipse at 72% -10%, rgba(226,104,24,0.12), transparent 55%), linear-gradient(180deg, #02060B 0%, #08111C 100%)",
       }}
     >
       {/* Halo orange diffus */}
@@ -219,7 +221,7 @@ function PilotageTempsReel() {
         className="pointer-events-none absolute right-[-180px] top-[100px] -z-10 h-[520px] w-[520px] rounded-full opacity-50 blur-[150px]"
         style={{
           background:
-            "radial-gradient(circle, rgba(255,90,31,0.30), transparent 70%)",
+            "radial-gradient(circle, rgba(226,104,24,0.30), transparent 70%)",
         }}
         aria-hidden
       />
@@ -234,7 +236,7 @@ function PilotageTempsReel() {
             >
               Pilotage en temps réel
             </p>
-            <h2 className="mt-4 font-sans text-[clamp(28px,3.4vw,46px)] font-extrabold leading-[1.08] tracking-[-0.02em] text-white">
+            <h2 className="mt-4 font-sans text-[clamp(28px,3.8vw,42px)] font-extrabold leading-[1.08] tracking-[-0.02em] text-white">
               Pilotez votre activité
               <br />
               <span style={{ color: ORANGE }}>en temps réel.</span>
@@ -275,7 +277,7 @@ function PilotageTempsReel() {
               className="pointer-events-none absolute inset-0 -z-10 translate-y-8 scale-90 rounded-[32px] opacity-70 blur-3xl"
               style={{
                 background:
-                  "radial-gradient(circle at 50% 40%, rgba(255,90,31,0.25), transparent 70%)",
+                  "radial-gradient(circle at 50% 40%, rgba(226,104,24,0.25), transparent 70%)",
               }}
               aria-hidden
             />
@@ -284,7 +286,7 @@ function PilotageTempsReel() {
         </div>
 
         {/* Bénéfices */}
-        <h3 className="mt-16 max-w-[680px] font-sans text-[clamp(20px,2.4vw,30px)] font-extrabold leading-[1.2] text-white">
+        <h3 className="mt-16 max-w-[680px] font-sans text-[clamp(24px,3vw,32px)] font-extrabold leading-[1.2] text-white">
           Conçu pour les restaurateurs qui veulent{" "}
           <span style={{ color: ORANGE }}>reprendre le contrôle.</span>
         </h3>
@@ -298,7 +300,7 @@ function PilotageTempsReel() {
               >
                 <span
                   className="flex h-10 w-10 items-center justify-center rounded-xl"
-                  style={{ backgroundColor: "rgba(255,90,31,0.16)" }}
+                  style={{ backgroundColor: "rgba(226,104,24,0.16)" }}
                 >
                   <Icon className="h-5 w-5" style={{ color: ORANGE }} aria-hidden />
                 </span>
@@ -332,7 +334,7 @@ function Reassurance() {
               <div key={r.title} className="flex flex-col items-center text-center">
                 <span
                   className="flex h-12 w-12 items-center justify-center rounded-2xl"
-                  style={{ backgroundColor: "rgba(255,90,31,0.12)" }}
+                  style={{ backgroundColor: "rgba(226,104,24,0.12)" }}
                 >
                   <Icon className="h-6 w-6" style={{ color: ORANGE }} aria-hidden />
                 </span>
@@ -359,10 +361,10 @@ export function BaselineFinale() {
   return (
     <section style={{ backgroundColor: "#040A12" }}>
       <div className="mx-auto max-w-[900px] px-5 py-[clamp(48px,6vw,80px)] text-center sm:px-8">
-        <p className="font-sans text-[clamp(20px,2.6vw,30px)] font-extrabold leading-[1.3] text-white">
+        <p className="font-sans text-[clamp(24px,3vw,32px)] font-extrabold leading-[1.3] text-white">
           Logones, le logiciel de caisse NF525 tout-en-un des restaurateurs.
         </p>
-        <p className="mt-3 text-[clamp(15px,1.8vw,19px)] font-medium" style={{ color: TXT_ON_NAVY }}>
+        <p className="mt-3 text-[clamp(16px,1.5vw,19px)] font-medium" style={{ color: TXT_ON_NAVY }}>
           <span style={{ color: ORANGE }}>Plus de simplicité.</span> Plus de
           contrôle. Plus de rentabilité.
         </p>

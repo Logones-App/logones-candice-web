@@ -42,10 +42,10 @@ export default function DemoPage() {
     <>
       <section className="pt-[140px] pb-12 ardoise-bg grain-overlay relative">
         <div className="relative mx-auto max-w-[1000px] px-5 text-center sm:px-8">
-          <h1 className="font-sans text-[clamp(36px,5vw,64px)] font-semibold leading-[1.1] tracking-[-0.025em] text-text-primary">
+          <h1 className="font-sans text-[clamp(36px,5vw,56px)] font-semibold leading-[1.1] tracking-[-0.025em] text-text-primary">
             Voyez Logones dans votre restaurant.
           </h1>
-          <p className="mx-auto mt-6 max-w-[640px] text-[clamp(16px,1.5vw,18px)] leading-[1.65] text-text-secondary">
+          <p className="mx-auto mt-6 max-w-[640px] text-[clamp(16px,1.5vw,19px)] leading-[1.65] text-text-secondary">
             30 minutes. Sans engagement. Sans pression commerciale.
           </p>
         </div>

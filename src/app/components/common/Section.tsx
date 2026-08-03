@@ -70,7 +70,6 @@ export function SectionLabel({
     <p
       className={cn(
         "text-[11px] font-semibold uppercase tracking-[0.08em]",
-        tone === "light" ? "" : "",
         colorClasses[color],
       )}
     >
@@ -83,23 +82,20 @@ export function SectionTitle({
   children,
   tone = "dark",
   align = "left",
-  display = "fraunces",
   size = "h2",
 }: {
   children: React.ReactNode;
   tone?: "dark" | "light";
   align?: "left" | "center";
-  display?: "fraunces" | "sans";
   size?: "h2" | "h3";
 }) {
   return (
     <h2
       className={cn(
-        "mt-3 text-balance font-normal leading-[1.15] tracking-[-0.02em]",
+        "mt-3 text-balance font-sans font-normal leading-[1.15] tracking-[-0.02em]",
         size === "h2"
-          ? "text-[clamp(28px,3.5vw,48px)]"
-          : "text-[clamp(20px,2.5vw,32px)] font-semibold",
-        display === "fraunces" && "font-sans",
+          ? "text-[clamp(28px,3.8vw,42px)]"
+          : "text-[clamp(24px,3vw,32px)] font-semibold",
         align === "center" && "text-center",
         tone === "light" ? "text-text-dark" : "text-text-primary",
       )}
@@ -123,7 +119,7 @@ export function SectionLead({
   return (
     <p
       className={cn(
-        "mt-5 max-w-[640px] text-[clamp(16px,1.5vw,18px)] leading-[1.65]",
+        "mt-5 max-w-[640px] text-[clamp(16px,1.5vw,19px)] leading-[1.65]",
         tone === "light" ? "text-text-dark-sec" : "text-text-secondary",
         align === "center" && "mx-auto text-center",
         className,

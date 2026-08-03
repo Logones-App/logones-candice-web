@@ -15,17 +15,18 @@ type Props = {
  */
 export function LogonesWordmark({
   className,
-  textColor = "#F1F0EA",
-  accentColor = "#FF7000",
+  textColor = "#FFFFFF",
+  accentColor = "#E26818",
 }: Props) {
   return (
     <span
       className={cn(
-        "inline-flex items-center font-bold leading-none tracking-[0.02em]",
+        "inline-flex items-center leading-none tracking-[-0.02em]",
         className,
       )}
       style={{
-        fontFamily: "var(--font-anton), 'Arial Narrow', sans-serif",
+        fontFamily: "var(--font-archivo), system-ui, sans-serif",
+        fontWeight: 700,
       }}
       aria-label="LOGONES"
     >
@@ -51,27 +52,29 @@ function TargetO({
   bullsEyeColor: string;
 }) {
   return (
+    /* Calé sur le O d'Archivo 700 : chasse ≈ 0,76 em, graisse du fût ≈ 0,17 em.
+       L'anneau reprend ces proportions pour que la cible passe pour une lettre
+       et non pour un pictogramme posé au milieu du mot. */
     <svg
       viewBox="0 0 100 100"
       style={{
-        width: "0.92em",
-        height: "0.92em",
-        marginInline: "-0.02em",
+        width: "0.76em",
+        height: "0.76em",
+        marginInline: "0.005em",
         flexShrink: 0,
       }}
       aria-hidden
     >
-      {/* Outer ring — the "O" shape */}
       <circle
         cx="50"
         cy="50"
-        r="38"
+        r="38.5"
         stroke={ringColor}
-        strokeWidth="14"
+        strokeWidth="23"
         fill="none"
       />
-      {/* Bullseye — centered accent dot */}
-      <circle cx="50" cy="50" r="11" fill={bullsEyeColor} />
+      {/* Point central, en accent */}
+      <circle cx="50" cy="50" r="10" fill={bullsEyeColor} />
     </svg>
   );
 }

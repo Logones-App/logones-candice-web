@@ -1,12 +1,15 @@
-import { Fraunces, Poppins, Anton, Caveat } from "next/font/google";
+import { Poppins, Archivo } from "next/font/google";
 
-export const fraunces = Fraunces({
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-fraunces",
-  display: "swap",
-});
+/**
+ * Deux familles, deux rôles :
+ *   Poppins — tout le texte courant et l'interface
+ *   Archivo — le wordmark et les titres d'affichage
+ *
+ * Archivo remplace Anton : grotesque dessinée pour les interfaces à forte
+ * densité, elle reste lisible à 24 px dans la barre de navigation là où les
+ * contreformes d'Anton se fermaient, et elle se décline de 100 à 900 quand
+ * Anton n'existait qu'en une seule graisse.
+ */
 
 export const poppins = Poppins({
   subsets: ["latin"],
@@ -15,16 +18,9 @@ export const poppins = Poppins({
   display: "swap",
 });
 
-export const anton = Anton({
+export const archivo = Archivo({
   subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-anton",
-  display: "swap",
-});
-
-export const caveat = Caveat({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-caveat",
+  weight: ["600", "700", "800"],
+  variable: "--font-archivo",
   display: "swap",
 });

@@ -82,9 +82,9 @@ export function CaisseFeatureHero() {
           </p>
 
           <h1
-            className="mt-4 text-[clamp(36px,5.5vw,72px)] leading-[1.05] tracking-[-0.02em] text-text-primary"
+            className="mt-4 text-[clamp(40px,6vw,68px)] leading-[1.05] tracking-[-0.02em] text-text-primary"
             style={{
-              fontWeight: 850,
+              fontWeight: 900,
               textShadow: "0 2px 30px rgba(0,0,0,0.6)",
             }}
           >

@@ -26,11 +26,11 @@ export function H2({ children }: { children: React.ReactNode }) {
     <h2
       style={{
         maxWidth: MEASURE,
-        fontSize: "clamp(24px, 3vw, 30px)",
-        lineHeight: 1.2,
-        fontWeight: 850,
+        fontSize: "clamp(24px, 3vw, 32px)",
+        lineHeight: 1.25,
+        fontWeight: 900,
         color: C.text,
-        letterSpacing: "-0.01em",
+        letterSpacing: "-0.02em",
         marginTop: "48px",
         marginBottom: "16px",
       }}
@@ -45,8 +45,8 @@ export function H3({ children }: { children: React.ReactNode }) {
     <h3
       style={{
         maxWidth: MEASURE,
-        fontSize: "19px",
-        lineHeight: 1.3,
+        fontSize: "17px",
+        lineHeight: 1.25,
         fontWeight: 800,
         color: C.text,
         marginTop: "32px",
@@ -63,8 +63,8 @@ export function P({ children }: { children: React.ReactNode }) {
     <p
       style={{
         maxWidth: MEASURE,
-        fontSize: "16.5px",
-        lineHeight: 1.75,
+        fontSize: "17px",
+        lineHeight: 1.6,
         color: C.textSubtle,
         marginBottom: "20px",
       }}
@@ -98,7 +98,7 @@ export function LI({ children }: { children: React.ReactNode }) {
   return (
     <li
       className="flex items-start gap-3"
-      style={{ fontSize: "16px", lineHeight: 1.65, color: C.textSubtle }}
+      style={{ fontSize: "15px", lineHeight: 1.6, color: C.textSubtle }}
     >
       <span
         style={{
@@ -164,7 +164,7 @@ export function Callout({
           <div
             style={{
               fontSize: "15px",
-              lineHeight: 1.65,
+              lineHeight: 1.6,
               color: C.text,
             }}
           >
@@ -189,17 +189,17 @@ export function Stat({ value, label }: { value: string; label: string }) {
     >
       <p
         style={{
-          fontSize: "clamp(40px, 6vw, 56px)",
-          fontWeight: 850,
+          fontSize: "clamp(36px, 5vw, 56px)",
+          fontWeight: 900,
           color: C.orange,
-          lineHeight: 1,
+          lineHeight: 1.05,
           letterSpacing: "-0.02em",
           marginBottom: "10px",
         }}
       >
         {value}
       </p>
-      <p style={{ fontSize: "15px", lineHeight: 1.55, color: C.textOnDarkSubtle }}>
+      <p style={{ fontSize: "15px", lineHeight: 1.6, color: C.textOnDarkSubtle }}>
         {label}
       </p>
     </div>
@@ -231,7 +231,7 @@ export function Quote({
       <blockquote
         style={{
           fontSize: "20px",
-          lineHeight: 1.5,
+          lineHeight: 1.45,
           fontWeight: 600,
           fontStyle: "italic",
           color: C.text,
@@ -241,7 +241,7 @@ export function Quote({
       </blockquote>
       {cite && (
         <figcaption
-          style={{ fontSize: "13.5px", color: C.textMuted, marginTop: "10px" }}
+          style={{ fontSize: "14px", color: C.textMuted, marginTop: "10px" }}
         >
           — {cite}
         </figcaption>

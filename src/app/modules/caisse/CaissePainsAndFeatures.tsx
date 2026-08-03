@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import type { LucideIcon } from "lucide-react";
 import {
   SplitSquareHorizontal,
@@ -13,20 +14,7 @@ import {
   Check,
 } from "lucide-react";
 
-const C = {
-  bg: "#02060B",
-  blue: "#147CFF",
-  text: "#FFFFFF",
-  textSubtle: "rgba(255,255,255,0.68)",
-  textMuted: "rgba(255,255,255,0.50)",
-  border: "rgba(20,124,255,0.18)",
-  borderSoft: "rgba(255,255,255,0.08)",
-  cardGradient:
-    "linear-gradient(180deg, rgba(10,25,40,0.96), rgba(4,13,23,0.98))",
-  widgetBg: "rgba(2,8,15,0.55)",
-  green: "#3DD27C",
-  red: "#E55B3C",
-};
+import { CAISSE as C } from "./palette";
 
 const CARD_SHADOW =
   "0 22px 55px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04)";
@@ -37,8 +25,8 @@ export function CaissePainsAndFeatures() {
       className="relative isolate overflow-hidden"
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(56px, 7vw, 80px)",
-        paddingInline: "clamp(20px, 4vw, 48px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
       {/* Soft blue glow on top */}
@@ -53,7 +41,7 @@ export function CaissePainsAndFeatures() {
 
       <div
         className="mx-auto"
-        style={{ maxWidth: "1280px" }}
+        style={{ maxWidth: container }}
       >
         <PainsBlock />
         <FeaturesBlock />
@@ -163,10 +151,10 @@ function PainCard({
         <h3
           style={{
             fontSize: "20px",
-            fontWeight: 850,
+            fontWeight: 900,
             color: C.text,
             marginBottom: "18px",
-            lineHeight: 1.2,
+            lineHeight: 1.25,
           }}
         >
           {title}
@@ -175,7 +163,7 @@ function PainCard({
         <p
           style={{
             fontSize: "15px",
-            lineHeight: 1.65,
+            lineHeight: 1.6,
             color: C.textSubtle,
             marginBottom: "28px",
           }}
@@ -223,7 +211,7 @@ function TvaWidget() {
               backgroundColor: "rgba(255,255,255,0.03)",
               border: `1px solid ${C.borderSoft}`,
               padding: "8px 10px",
-              fontSize: "10.5px",
+              fontSize: "11px",
             }}
           >
             <span style={{ color: C.text, fontWeight: 700 }}>{row.client}</span>
@@ -318,7 +306,7 @@ function PlanSalleWidget() {
             <li
               key={r.time}
               className="flex items-center gap-2"
-              style={{ fontSize: "10.5px" }}
+              style={{ fontSize: "11px" }}
             >
               <span
                 className="inline-block"
@@ -373,9 +361,9 @@ function MargeWidget() {
       <p
         style={{
           fontSize: "28px",
-          fontWeight: 850,
+          fontWeight: 900,
           color: C.text,
-          lineHeight: 1,
+          lineHeight: 1.05,
           marginTop: "6px",
           fontVariantNumeric: "tabular-nums",
         }}
@@ -521,10 +509,10 @@ function FeatureCard({
       <h3
         style={{
           fontSize: "17px",
-          fontWeight: 850,
+          fontWeight: 900,
           color: C.text,
           marginBottom: "14px",
-          lineHeight: 1.2,
+          lineHeight: 1.25,
         }}
       >
         {title}
@@ -532,7 +520,7 @@ function FeatureCard({
       <p
         style={{
           fontSize: "14px",
-          lineHeight: 1.55,
+          lineHeight: 1.6,
           color: "rgba(255,255,255,0.66)",
           marginBottom: "22px",
         }}
@@ -576,7 +564,7 @@ function TicketRapide() {
           <li
             key={name}
             className="flex items-center justify-between"
-            style={{ fontSize: "10.5px" }}
+            style={{ fontSize: "11px" }}
           >
             <span style={{ color: C.text }}>{name}</span>
             <span style={{ color: C.text, fontWeight: 600, fontFamily: "var(--font-mono, monospace)" }}>
@@ -593,7 +581,7 @@ function TicketRapide() {
         <span
           style={{
             fontSize: "13px",
-            fontWeight: 850,
+            fontWeight: 900,
             color: C.blue,
             fontFamily: "var(--font-mono, monospace)",
           }}
@@ -626,7 +614,7 @@ function ServicesGrid() {
             border: `1px solid ${i === 0 ? "rgba(20,124,255,0.40)" : C.borderSoft}`,
             borderRadius: "8px",
             padding: "8px 10px",
-            fontSize: "10.5px",
+            fontSize: "11px",
           }}
         >
           <span style={{ color: C.text, fontWeight: 600 }}>{s.label}</span>
@@ -693,17 +681,17 @@ function TicketBistrot() {
       className="mx-auto text-center"
       style={{
         backgroundColor: "#F5F1E8",
-        color: "#1F1F2D",
+        color: "#07111F",
         borderRadius: "6px",
         padding: "12px 10px",
         fontFamily: "var(--font-mono, monospace)",
         maxWidth: "180px",
       }}
     >
-      <p style={{ fontSize: "11px", fontWeight: 900, letterSpacing: "0.05em" }}>
+      <p style={{ fontSize: "11px", fontWeight: 900, letterSpacing: "0.06em" }}>
         LE BISTROT
       </p>
-      <p style={{ fontSize: "8px", opacity: 0.7, lineHeight: 1.3 }}>
+      <p style={{ fontSize: "8px", opacity: 0.7, lineHeight: 1.25 }}>
         18 Rue de la Paix
         <br />
         69002 Lyon
@@ -712,7 +700,7 @@ function TicketBistrot() {
         className="my-1.5 border-t border-dashed"
         style={{ borderColor: "rgba(31,31,45,0.30)" }}
       />
-      <p style={{ fontSize: "9px", opacity: 0.85, lineHeight: 1.4 }}>
+      <p style={{ fontSize: "9px", opacity: 0.85, lineHeight: 1.45 }}>
         Ticket #0034
         <br />
         30/04/2025 — 21:14
@@ -753,9 +741,9 @@ function CaWidget() {
       <p
         style={{
           fontSize: "22px",
-          fontWeight: 850,
+          fontWeight: 900,
           color: C.text,
-          lineHeight: 1,
+          lineHeight: 1.05,
           marginTop: "4px",
           fontVariantNumeric: "tabular-nums",
         }}
@@ -821,8 +809,8 @@ function Nf525Badge() {
                 fontSize: "13px",
                 fontWeight: 900,
                 color: C.text,
-                lineHeight: 1,
-                letterSpacing: "0.02em",
+                lineHeight: 1.05,
+                letterSpacing: "0.06em",
               }}
             >
               NF525
@@ -832,7 +820,7 @@ function Nf525Badge() {
                 fontSize: "8px",
                 fontWeight: 800,
                 color: "rgba(255,255,255,0.80)",
-                letterSpacing: "0.12em",
+                letterSpacing: "0.14em",
                 marginTop: "2px",
               }}
             >
@@ -882,7 +870,7 @@ function SectionHeader({
       <p
         style={{
           fontSize: "12px",
-          letterSpacing: "0.18em",
+          letterSpacing: "0.14em",
           fontWeight: 900,
           color: C.blue,
           textTransform: "uppercase",
@@ -896,10 +884,10 @@ function SectionHeader({
         style={{
           fontSize:
             titleSize === "large"
-              ? "clamp(32px, 4.5vw, 46px)"
-              : "clamp(30px, 4vw, 42px)",
+              ? "clamp(28px, 3.8vw, 42px)"
+              : "clamp(28px, 3.8vw, 42px)",
           lineHeight: titleSize === "large" ? 1.08 : 1.1,
-          fontWeight: 850,
+          fontWeight: 900,
           color: C.text,
           maxWidth: titleSize === "large" ? "760px" : "640px",
         }}

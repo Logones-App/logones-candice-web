@@ -11,12 +11,14 @@ import {
   Play,
 } from "lucide-react";
 
+import { brand, ground, onNight } from "../../lib/tokens";
+
 /* ===== Charte (continuité avec le Cockpit) ===== */
-const BG = "#07111F";
-const ORANGE = "#FF7000";
+const BG = ground.night;
+const ORANGE = brand.orange;
 const CARD_FROM = "#0D1A22";
 const CARD_TO = "#08131A";
-const TXT = "#F8F4EA";
+const TXT = onNight.text;
 const TXT_MUTED = "rgba(255,255,255,0.62)";
 
 /* ===== 7 modules du Cockpit, positionnés sur un heptagone =====
@@ -90,7 +92,7 @@ function ModuleCard({
 }) {
   return (
     <div
-      className="flex items-start gap-2.5 border border-white/[0.07] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#FF7000]/40"
+      className="flex items-start gap-2.5 border border-white/[0.07] transition-all duration-200 hover:-translate-y-0.5 hover:border-[color:var(--gold-light)]/40"
       style={{
         background: `linear-gradient(180deg, ${CARD_FROM} 0%, ${CARD_TO} 100%)`,
         borderRadius: "12px",
@@ -101,18 +103,18 @@ function ModuleCard({
     >
       <span
         className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg"
-        style={{ backgroundColor: "rgba(255,112,0,0.14)" }}
+        style={{ backgroundColor: "rgba(226,104,24,0.14)" }}
       >
         <Icon size={18} style={{ color: ORANGE }} strokeWidth={1.9} aria-hidden />
       </span>
       <div className="min-w-0">
-        <p style={{ fontSize: "13.5px", fontWeight: 800, color: TXT, lineHeight: 1.2 }}>
+        <p style={{ fontSize: "14px", fontWeight: 800, color: TXT, lineHeight: 1.25 }}>
           {title}
         </p>
         <p
           style={{
-            fontSize: "11.5px",
-            lineHeight: 1.4,
+            fontSize: "12px",
+            lineHeight: 1.45,
             color: TXT_MUTED,
             marginTop: "3px",
           }}
@@ -134,7 +136,7 @@ function CenterNode() {
       style={{
         backgroundColor: BG,
         boxShadow:
-          "0 0 0 1px rgba(255,255,255,0.08), 0 30px 80px rgba(0,0,0,0.55), 0 0 70px rgba(255,112,0,0.22)",
+          "0 0 0 1px rgba(255,255,255,0.08), 0 30px 80px rgba(0,0,0,0.55), 0 0 70px rgba(226,104,24,0.22)",
       }}
     >
       {/* Bouton lecture */}
@@ -142,7 +144,7 @@ function CenterNode() {
         className="flex h-14 w-14 items-center justify-center rounded-full transition-transform duration-200 group-hover:scale-110"
         style={{
           backgroundColor: ORANGE,
-          boxShadow: "0 10px 30px rgba(255,112,0,0.45)",
+          boxShadow: "0 10px 30px rgba(226,104,24,0.45)",
         }}
       >
         <Play
@@ -156,11 +158,11 @@ function CenterNode() {
       <div>
         <p
           style={{
-            fontSize: "clamp(14px,1.5vw,18px)",
+            fontSize: "clamp(16px, 1.5vw, 19px)",
             fontWeight: 800,
-            letterSpacing: "0.12em",
+            letterSpacing: "0.14em",
             color: TXT,
-            lineHeight: 1,
+            lineHeight: 1.05,
           }}
         >
           LOGONES
@@ -179,7 +181,7 @@ export function PlatformOrbit() {
       className="relative isolate flex min-h-screen flex-col items-center justify-center overflow-hidden"
       style={{
         background:
-          "radial-gradient(ellipse at 50% 45%, rgba(255,112,0,0.10), transparent 60%), linear-gradient(180deg, #020B12 0%, #07111F 50%, #020B12 100%)",
+          "radial-gradient(ellipse at 50% 45%, rgba(226,104,24,0.10), transparent 60%), linear-gradient(180deg, #010409 0%, #02060B 50%, #010409 100%)",
       }}
     >
       <div className="mx-auto w-full max-w-[1280px] px-5 py-20 sm:px-8 lg:px-10">

@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -32,7 +33,7 @@ export function StocksHero() {
       style={{
         backgroundColor: C.bg,
         minHeight: "740px",
-        paddingBlock: "120px clamp(56px, 6vw, 80px)",
+        paddingBlock: rhythm.hero,
       }}
     >
       {/* Background image — restaurant en service */}
@@ -92,8 +93,8 @@ export function StocksHero() {
       <div
         className="relative mx-auto"
         style={{
-          maxWidth: "1280px",
-          paddingInline: "clamp(20px, 3vw, 40px)",
+          maxWidth: container,
+          paddingInline: gutter,
         }}
       >
         <div className="max-w-[680px]">
@@ -117,9 +118,9 @@ export function StocksHero() {
 
             <h1
               style={{
-                fontSize: "clamp(42px, 6vw, 68px)",
-                lineHeight: 0.98,
-                fontWeight: 850,
+                fontSize: "clamp(40px, 6vw, 68px)",
+                lineHeight: 1.05,
+                fontWeight: 900,
                 color: C.text,
                 letterSpacing: "-0.02em",
                 marginBottom: "22px",
@@ -135,7 +136,7 @@ export function StocksHero() {
 
             <p
               style={{
-                fontSize: "18px",
+                fontSize: "17px",
                 lineHeight: 1.6,
                 color: C.textSubtle,
                 maxWidth: "620px",
@@ -173,7 +174,7 @@ export function StocksHero() {
                   </span>
                   <span
                     style={{
-                      fontSize: "13.5px",
+                      fontSize: "14px",
                       fontWeight: 600,
                       color: "rgba(255,255,255,0.84)",
                     }}
@@ -191,10 +192,10 @@ export function StocksHero() {
                 style={{
                   height: "54px",
                   padding: "0 28px",
-                  background: `linear-gradient(135deg, ${C.yellow}, ${C.yellowDeep})`,
-                  color: "#1A1000",
+                  background: `linear-gradient(135deg, ${C.buttonFrom}, ${C.buttonTo})`,
+                  color: C.onButton,
                   fontSize: "15px",
-                  fontWeight: 850,
+                  fontWeight: 900,
                   boxShadow:
                     "0 14px 32px rgba(255,196,0,0.35), inset 0 1px 0 rgba(255,255,255,0.28)",
                   border: "1px solid rgba(255,255,255,0.10)",
@@ -222,7 +223,7 @@ export function StocksHero() {
 
             <ul
               className="flex flex-wrap gap-x-5 gap-y-2"
-              style={{ fontSize: "12.5px", color: C.textMuted }}
+              style={{ fontSize: "13px", color: C.textMuted }}
             >
               {reassurance.map((r) => (
                 <li key={r} className="inline-flex items-center gap-1.5">

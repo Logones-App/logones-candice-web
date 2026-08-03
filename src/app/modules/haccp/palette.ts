@@ -1,17 +1,31 @@
+import { ground, modules, onNight, status } from "../../lib/tokens";
+
+const M = modules.haccp;
+
+/** Alias du module HACCP vers les tokens. Aucune couleur propre ici. */
 export const HACCP = {
-  bg: "#020B08",
-  bgSecondary: "#06130F",
-  card: "#071A13",
-  cardLighter: "#0B221A",
-  green: "#22C55E",
-  greenDeep: "#16A34A",
-  greenSoft: "rgba(34,197,94,0.16)",
-  greenSofter: "rgba(34,197,94,0.08)",
-  text: "#FFFFFF",
-  textSubtle: "rgba(255,255,255,0.72)",
-  textMuted: "rgba(255,255,255,0.52)",
-  border: "rgba(34,197,94,0.18)",
-  borderSoft: "rgba(255,255,255,0.06)",
-  red: "#EF4444",
-  orange: "#F59E0B",
+  bg: ground.night,
+  bgSecondary: ground.nightSurface,
+  card: ground.nightSurface,
+  cardLighter: ground.nightSurfaceHigh,
+
+  green: M.accent,
+  greenDeep: M.deep,
+  greenLight: M.light,
+  greenSoft: M.soft,
+  greenSofter: M.softer,
+
+  /** Bouton : encre sombre sur vert, 6,1:1. */
+  buttonFrom: M.buttonFrom,
+  buttonTo: M.buttonTo,
+  onButton: M.onButton,
+
+  text: onNight.text,
+  textSubtle: onNight.subtle,
+  textMuted: onNight.muted,
+  border: M.border,
+  borderSoft: onNight.borderSoft,
+
+  red: status.error.night,
+  orange: status.warning.night,
 } as const;

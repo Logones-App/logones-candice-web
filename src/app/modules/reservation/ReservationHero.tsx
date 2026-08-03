@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -23,7 +24,7 @@ export function ReservationHero() {
       style={{
         backgroundColor: C.bg,
         minHeight: "760px",
-        paddingBlock: "120px clamp(56px, 6vw, 80px)",
+        paddingBlock: rhythm.hero,
       }}
     >
       {/* Background image — restaurant premium soir, hôtesse + tablette */}
@@ -58,7 +59,7 @@ export function ReservationHero() {
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(circle at 78% 60%, rgba(255,48,48,0.18), transparent 45%)",
+            "radial-gradient(circle at 78% 60%, rgba(209,67,67,0.18), transparent 45%)",
         }}
         aria-hidden
       />
@@ -83,8 +84,8 @@ export function ReservationHero() {
       <div
         className="relative mx-auto"
         style={{
-          maxWidth: "1280px",
-          paddingInline: "clamp(20px, 3vw, 40px)",
+          maxWidth: container,
+          paddingInline: gutter,
         }}
       >
         <div className="max-w-[680px]">
@@ -94,10 +95,10 @@ export function ReservationHero() {
               style={{
                 color: C.redAccent,
                 backgroundColor: C.redSofter,
-                border: `1px solid rgba(255,48,48,0.35)`,
+                border: `1px solid rgba(209,67,67,0.35)`,
                 fontSize: "12px",
                 fontWeight: 900,
-                letterSpacing: "0.12em",
+                letterSpacing: "0.14em",
                 textTransform: "uppercase",
                 padding: "6px 14px",
                 marginBottom: "26px",
@@ -108,9 +109,9 @@ export function ReservationHero() {
 
             <h1
               style={{
-                fontSize: "clamp(40px, 5.5vw, 58px)",
+                fontSize: "clamp(40px, 6vw, 68px)",
                 lineHeight: 1.05,
-                fontWeight: 850,
+                fontWeight: 900,
                 color: C.text,
                 letterSpacing: "-0.02em",
                 marginBottom: "22px",
@@ -130,7 +131,7 @@ export function ReservationHero() {
 
             <p
               style={{
-                fontSize: "18px",
+                fontSize: "17px",
                 lineHeight: 1.6,
                 color: C.textSubtle,
                 maxWidth: "560px",
@@ -148,12 +149,12 @@ export function ReservationHero() {
                 style={{
                   height: "54px",
                   padding: "0 28px",
-                  background: C.red,
+                  background: `linear-gradient(135deg, ${C.buttonFrom}, ${C.buttonTo})`,
                   fontSize: "15px",
                   fontWeight: 800,
                   borderRadius: "8px",
                   boxShadow:
-                    "0 12px 28px rgba(224,32,32,0.35), inset 0 1px 0 rgba(255,255,255,0.22)",
+                    "0 12px 28px rgba(209,67,67,0.35), inset 0 1px 0 rgba(255,255,255,0.22)",
                 }}
               >
                 Demander une démo
@@ -207,7 +208,7 @@ export function ReservationHero() {
                       fontSize: "13px",
                       fontWeight: 600,
                       color: "rgba(255,255,255,0.86)",
-                      lineHeight: 1.3,
+                      lineHeight: 1.25,
                     }}
                   >
                     {b.label}

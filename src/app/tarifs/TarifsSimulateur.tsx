@@ -1,5 +1,6 @@
 "use client";
 
+import { container, gutter, rhythm } from "../lib/spacing";
 import { useState, useMemo } from "react";
 import { Store, Users, CalendarCheck, TrendingDown, ArrowRight } from "lucide-react";
 import { TARIFS as C } from "./palette";
@@ -36,11 +37,11 @@ export function TarifsSimulateur() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(56px, 6vw, 80px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div
           className="relative overflow-hidden"
           style={{
@@ -61,7 +62,7 @@ export function TarifsSimulateur() {
               width: "420px",
               height: "320px",
               background:
-                "radial-gradient(ellipse, rgba(255,106,26,0.18), transparent 65%)",
+                "radial-gradient(ellipse, rgba(226,104,24,0.18), transparent 65%)",
               filter: "blur(20px)",
             }}
             aria-hidden
@@ -84,9 +85,9 @@ export function TarifsSimulateur() {
               </p>
               <h2
                 style={{
-                  fontSize: "clamp(24px, 2.6vw, 32px)",
-                  lineHeight: 1.1,
-                  fontWeight: 850,
+                  fontSize: "clamp(24px, 3vw, 32px)",
+                  lineHeight: 1.15,
+                  fontWeight: 900,
                   color: C.textOnDark,
                   marginBottom: "12px",
                 }}
@@ -97,7 +98,7 @@ export function TarifsSimulateur() {
               <p
                 style={{
                   fontSize: "14px",
-                  lineHeight: 1.55,
+                  lineHeight: 1.6,
                   color: C.textOnDarkSubtle,
                   marginBottom: "24px",
                 }}
@@ -144,7 +145,7 @@ export function TarifsSimulateur() {
                   fontSize: "11px",
                   fontWeight: 800,
                   color: C.textOnDarkMuted,
-                  letterSpacing: "0.12em",
+                  letterSpacing: "0.14em",
                   textTransform: "uppercase",
                   marginBottom: "14px",
                 }}
@@ -166,7 +167,7 @@ export function TarifsSimulateur() {
                     style={{
                       fontSize: "13px",
                       color: C.textOnDarkSubtle,
-                      lineHeight: 1.4,
+                      lineHeight: 1.45,
                     }}
                   >
                     <span
@@ -199,7 +200,7 @@ export function TarifsSimulateur() {
                   fontSize: "11px",
                   fontWeight: 800,
                   color: C.textOnDarkMuted,
-                  letterSpacing: "0.12em",
+                  letterSpacing: "0.14em",
                   textTransform: "uppercase",
                   marginBottom: "14px",
                 }}
@@ -218,9 +219,9 @@ export function TarifsSimulateur() {
               <p
                 style={{
                   fontSize: "30px",
-                  fontWeight: 850,
+                  fontWeight: 900,
                   color: C.textOnDark,
-                  lineHeight: 1,
+                  lineHeight: 1.05,
                   fontVariantNumeric: "tabular-nums",
                   marginBottom: "16px",
                 }}
@@ -241,7 +242,7 @@ export function TarifsSimulateur() {
                   fontSize: "20px",
                   fontWeight: 800,
                   color: C.textOnDarkSubtle,
-                  lineHeight: 1,
+                  lineHeight: 1.05,
                   fontVariantNumeric: "tabular-nums",
                 }}
               >
@@ -253,11 +254,11 @@ export function TarifsSimulateur() {
             <div
               className="relative overflow-hidden"
               style={{
-                background: `linear-gradient(160deg, rgba(255,106,26,0.18), rgba(255,106,26,0.04))`,
+                background: `linear-gradient(160deg, rgba(226,104,24,0.18), rgba(226,104,24,0.04))`,
                 border: `1px solid ${C.orangeBorder}`,
                 borderRadius: "16px",
                 padding: "20px",
-                boxShadow: "0 18px 40px rgba(255,106,26,0.18)",
+                boxShadow: "0 18px 40px rgba(226,104,24,0.18)",
               }}
             >
               <p
@@ -265,7 +266,7 @@ export function TarifsSimulateur() {
                   fontSize: "11px",
                   fontWeight: 800,
                   color: C.orange,
-                  letterSpacing: "0.12em",
+                  letterSpacing: "0.14em",
                   textTransform: "uppercase",
                   marginBottom: "14px",
                 }}
@@ -284,9 +285,9 @@ export function TarifsSimulateur() {
               <p
                 style={{
                   fontSize: "30px",
-                  fontWeight: 850,
+                  fontWeight: 900,
                   color: C.textOnDark,
-                  lineHeight: 1,
+                  lineHeight: 1.05,
                   fontVariantNumeric: "tabular-nums",
                   marginBottom: "16px",
                 }}
@@ -307,7 +308,7 @@ export function TarifsSimulateur() {
                   fontSize: "20px",
                   fontWeight: 800,
                   color: C.textOnDark,
-                  lineHeight: 1,
+                  lineHeight: 1.05,
                   fontVariantNumeric: "tabular-nums",
                   marginBottom: "18px",
                 }}
@@ -321,7 +322,7 @@ export function TarifsSimulateur() {
                   background: C.orange,
                   color: "#1A0700",
                   padding: "10px 12px",
-                  fontWeight: 850,
+                  fontWeight: 900,
                 }}
               >
                 <TrendingDown size={16} strokeWidth={2.5} />
@@ -332,8 +333,8 @@ export function TarifsSimulateur() {
                   <p
                     style={{
                       fontSize: "20px",
-                      fontWeight: 850,
-                      lineHeight: 1,
+                      fontWeight: 900,
+                      lineHeight: 1.05,
                       fontVariantNumeric: "tabular-nums",
                     }}
                   >
@@ -404,8 +405,8 @@ function Slider({
         </div>
         <span
           style={{
-            fontSize: "16px",
-            fontWeight: 850,
+            fontSize: "15px",
+            fontWeight: 900,
             color: C.orange,
             fontVariantNumeric: "tabular-nums",
           }}

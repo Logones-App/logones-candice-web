@@ -12,7 +12,7 @@ export function Logo({
   /** @deprecated — gardé pour rétrocompatibilité d'API mais sans effet */
   showText?: boolean;
 }) {
-  const textColor = variant === "light" ? "#F1F0EA" : "#1F1F2D";
+  const textColor = variant === "light" ? "#FFFFFF" : "#07111F";
 
   return (
     <Link
@@ -20,13 +20,16 @@ export function Logo({
       aria-label="Logones — retour à l'accueil"
       className={cn("inline-flex items-center gap-2.5", className)}
     >
+      {/* Vignette BIMI : la même marque que celle affichée dans la boîte
+          mail des clients. Ne pas modifier ce fichier — il doit rester
+          conforme au profil Tiny-PS exigé par BIMI. */}
       <Image
-        src="/images/logos/LOGONES-Logo-Final.svg"
+        src="/logones-bimi.svg"
         alt=""
         width={40}
         height={40}
         priority
-        className="h-10 w-10"
+        className="h-10 w-10 rounded-[10px]"
       />
       <LogonesWordmark textColor={textColor} className="text-2xl" />
     </Link>

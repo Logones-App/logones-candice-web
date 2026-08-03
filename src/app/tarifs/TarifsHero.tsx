@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../lib/spacing";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -10,7 +11,7 @@ export function TarifsHero() {
       style={{
         backgroundColor: C.bgDark,
         minHeight: "520px",
-        paddingBlock: "120px clamp(40px, 5vw, 64px)",
+        paddingBlock: rhythm.hero,
       }}
     >
       {/* Right photo */}
@@ -39,7 +40,7 @@ export function TarifsHero() {
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse at 70% 50%, rgba(255,106,26,0.18), transparent 55%)",
+              "radial-gradient(ellipse at 70% 50%, rgba(226,104,24,0.18), transparent 55%)",
           }}
         />
       </div>
@@ -48,7 +49,7 @@ export function TarifsHero() {
       <div
         className="pointer-events-none absolute inset-0 lg:hidden"
         style={{
-          background: `radial-gradient(circle at 70% 30%, rgba(255,106,26,0.18), transparent 55%), ${C.bgDark}`,
+          background: `radial-gradient(circle at 70% 30%, rgba(226,104,24,0.18), transparent 55%), ${C.bgDark}`,
         }}
         aria-hidden
       />
@@ -56,8 +57,8 @@ export function TarifsHero() {
       <div
         className="relative mx-auto"
         style={{
-          maxWidth: "1280px",
-          paddingInline: "clamp(20px, 3vw, 40px)",
+          maxWidth: container,
+          paddingInline: gutter,
         }}
       >
         <div className="max-w-[640px]">
@@ -80,9 +81,9 @@ export function TarifsHero() {
 
           <h1
             style={{
-              fontSize: "clamp(40px, 5.4vw, 62px)",
-              lineHeight: 1.02,
-              fontWeight: 850,
+              fontSize: "clamp(36px, 5vw, 56px)",
+              lineHeight: 1.05,
+              fontWeight: 900,
               color: C.textOnDark,
               letterSpacing: "-0.02em",
               marginBottom: "22px",
@@ -102,7 +103,7 @@ export function TarifsHero() {
 
           <p
             style={{
-              fontSize: "18px",
+              fontSize: "17px",
               lineHeight: 1.6,
               color: C.textOnDarkSubtle,
               maxWidth: "560px",
@@ -117,15 +118,16 @@ export function TarifsHero() {
           <div className="flex flex-wrap gap-3">
             <Link
               href="/demo"
-              className="inline-flex items-center justify-center gap-2 rounded-full text-white transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 rounded-full transition-all hover:-translate-y-0.5"
               style={{
                 height: "54px",
                 padding: "0 28px",
                 background: `linear-gradient(135deg, ${C.orange}, ${C.orangeDeep})`,
+                color: "#1A0A00",
                 fontSize: "15px",
-                fontWeight: 850,
+                fontWeight: 900,
                 boxShadow:
-                  "0 14px 32px rgba(255,106,26,0.38), inset 0 1px 0 rgba(255,255,255,0.28)",
+                  "0 14px 32px rgba(226,104,24,0.38), inset 0 1px 0 rgba(255,255,255,0.28)",
                 border: "1px solid rgba(255,255,255,0.10)",
               }}
             >

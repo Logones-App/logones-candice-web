@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import { Zap, Calculator, Bell, FileSpreadsheet } from "lucide-react";
 import { STOCKS as C } from "./palette";
 
@@ -29,11 +30,11 @@ export function StocksBenefits() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(40px, 5vw, 64px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div className="text-center" style={{ marginBottom: "44px" }}>
           <p
             style={{
@@ -49,9 +50,9 @@ export function StocksBenefits() {
           </p>
           <h2
             style={{
-              fontSize: "clamp(28px, 4vw, 40px)",
-              lineHeight: 1.1,
-              fontWeight: 850,
+              fontSize: "clamp(28px, 3.8vw, 42px)",
+              lineHeight: 1.15,
+              fontWeight: 900,
               color: C.text,
               maxWidth: "760px",
               margin: "0 auto",
@@ -107,10 +108,10 @@ export function StocksBenefits() {
                 className="relative"
                 style={{
                   fontSize: "17px",
-                  fontWeight: 850,
+                  fontWeight: 900,
                   color: C.text,
                   marginBottom: "10px",
-                  lineHeight: 1.2,
+                  lineHeight: 1.25,
                 }}
               >
                 {b.title}
@@ -119,7 +120,7 @@ export function StocksBenefits() {
                 className="relative"
                 style={{
                   fontSize: "14px",
-                  lineHeight: 1.55,
+                  lineHeight: 1.6,
                   color: C.textSubtle,
                 }}
               >

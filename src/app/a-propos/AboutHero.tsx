@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../lib/spacing";
 import Link from "next/link";
 import { ArrowRight, X, LineChart } from "lucide-react";
 import { ABOUT as C } from "./palette";
@@ -16,8 +17,8 @@ export function AboutHero() {
       className="relative isolate overflow-hidden"
       style={{
         backgroundColor: C.bgDark,
-        paddingBlock: "120px clamp(80px, 9vw, 140px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.hero,
+        paddingInline: gutter,
       }}
     >
       {/* Radial subtle gradient */}
@@ -25,7 +26,7 @@ export function AboutHero() {
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background: `
-            radial-gradient(ellipse at 18% 25%, rgba(255,106,42,0.10), transparent 45%),
+            radial-gradient(ellipse at 18% 25%, rgba(226,104,24,0.10), transparent 45%),
             radial-gradient(ellipse at 85% 80%, rgba(6,18,37,0.6), transparent 55%),
             linear-gradient(180deg, ${C.bgDark} 0%, ${C.bgDarkDeep} 100%)
           `,
@@ -33,7 +34,7 @@ export function AboutHero() {
         aria-hidden
       />
 
-      <div className="relative mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="relative mx-auto" style={{ maxWidth: container }}>
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.92fr] lg:gap-16">
           {/* LEFT — Text */}
           <div>
@@ -42,7 +43,7 @@ export function AboutHero() {
                 color: C.orange,
                 fontSize: "12px",
                 fontWeight: 800,
-                letterSpacing: "0.18em",
+                letterSpacing: "0.14em",
                 textTransform: "uppercase",
                 marginBottom: "22px",
               }}
@@ -52,9 +53,9 @@ export function AboutHero() {
 
             <h1
               style={{
-                fontSize: "clamp(36px, 4.6vw, 56px)",
-                lineHeight: 1.06,
-                fontWeight: 850,
+                fontSize: "clamp(36px, 5vw, 56px)",
+                lineHeight: 1.05,
+                fontWeight: 900,
                 color: C.textOnDark,
                 letterSpacing: "-0.02em",
                 marginBottom: "26px",
@@ -70,7 +71,7 @@ export function AboutHero() {
             <p
               style={{
                 fontSize: "17px",
-                lineHeight: 1.65,
+                lineHeight: 1.6,
                 color: C.textOnDarkSubtle,
                 maxWidth: "560px",
                 marginBottom: "22px",
@@ -117,8 +118,8 @@ export function AboutHero() {
             <div
               className="space-y-4"
               style={{
-                fontSize: "16px",
-                lineHeight: 1.65,
+                fontSize: "15px",
+                lineHeight: 1.6,
                 color: C.textOnDarkSubtle,
                 maxWidth: "560px",
               }}
@@ -161,15 +162,16 @@ export function AboutHero() {
             <div style={{ marginTop: "34px" }}>
               <Link
                 href="/"
-                className="inline-flex items-center justify-center gap-2 rounded-full text-white transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 rounded-full transition-all hover:-translate-y-0.5"
                 style={{
                   height: "54px",
                   padding: "0 28px",
                   background: `linear-gradient(135deg, ${C.orange}, ${C.orangeDeep})`,
+                  color: "#1A0A00",
                   fontSize: "15px",
                   fontWeight: 800,
                   boxShadow:
-                    "0 14px 32px rgba(255,106,42,0.35), inset 0 1px 0 rgba(255,255,255,0.28)",
+                    "0 14px 32px rgba(226,104,24,0.35), inset 0 1px 0 rgba(255,255,255,0.28)",
                 }}
               >
                 Découvrir Logones
@@ -235,9 +237,9 @@ export function AboutHero() {
                 <span
                   style={{
                     fontSize: "44px",
-                    fontWeight: 850,
+                    fontWeight: 900,
                     color: C.textOnDark,
-                    lineHeight: 1,
+                    lineHeight: 1.05,
                     letterSpacing: "-0.02em",
                   }}
                 >
@@ -249,7 +251,7 @@ export function AboutHero() {
                   fontSize: "13px",
                   fontWeight: 700,
                   color: C.textOnDark,
-                  lineHeight: 1.35,
+                  lineHeight: 1.25,
                   marginBottom: "6px",
                 }}
               >

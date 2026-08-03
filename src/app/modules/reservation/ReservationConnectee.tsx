@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import type { LucideIcon } from "lucide-react";
 import {
   LayoutGrid,
@@ -45,13 +46,13 @@ export function ReservationConnectee() {
       id="features"
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(40px, 5vw, 72px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
       <div
         className="mx-auto grid items-start gap-10 lg:grid-cols-[28fr_72fr] lg:gap-10"
-        style={{ maxWidth: "1280px" }}
+        style={{ maxWidth: container }}
       >
         {/* LEFT — text */}
         <div className="lg:sticky lg:top-24">
@@ -69,9 +70,9 @@ export function ReservationConnectee() {
           </p>
           <h2
             style={{
-              fontSize: "clamp(28px, 4vw, 38px)",
-              lineHeight: 1.1,
-              fontWeight: 850,
+              fontSize: "clamp(28px, 3.8vw, 42px)",
+              lineHeight: 1.15,
+              fontWeight: 900,
               color: C.text,
               marginBottom: "18px",
             }}
@@ -82,8 +83,8 @@ export function ReservationConnectee() {
           </h2>
           <p
             style={{
-              fontSize: "16px",
-              lineHeight: 1.65,
+              fontSize: "15px",
+              lineHeight: 1.6,
               color: C.textSubtle,
             }}
           >
@@ -100,7 +101,7 @@ export function ReservationConnectee() {
               className="overflow-hidden"
               style={{
                 background: C.card,
-                border: `1px solid rgba(255,48,48,0.14)`,
+                border: `1px solid rgba(209,67,67,0.14)`,
                 borderRadius: "14px",
                 boxShadow:
                   "0 18px 45px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04)",
@@ -114,8 +115,8 @@ export function ReservationConnectee() {
                     style={{
                       width: "26px",
                       height: "26px",
-                      backgroundColor: "rgba(255,48,48,0.10)",
-                      border: `1px solid rgba(255,48,48,0.30)`,
+                      backgroundColor: "rgba(209,67,67,0.10)",
+                      border: `1px solid rgba(209,67,67,0.30)`,
                       color: C.redAccent,
                     }}
                     aria-hidden
@@ -124,10 +125,10 @@ export function ReservationConnectee() {
                   </span>
                   <h3
                     style={{
-                      fontSize: "16px",
-                      fontWeight: 850,
+                      fontSize: "15px",
+                      fontWeight: 900,
                       color: C.text,
-                      lineHeight: 1.2,
+                      lineHeight: 1.25,
                     }}
                   >
                     {c.title}
@@ -136,8 +137,8 @@ export function ReservationConnectee() {
                 <p
                   className="mt-2"
                   style={{
-                    fontSize: "13.5px",
-                    lineHeight: 1.55,
+                    fontSize: "14px",
+                    lineHeight: 1.6,
                     color: C.textSubtle,
                   }}
                 >
@@ -167,7 +168,7 @@ function CardVisual({
         height: "130px",
         background:
           "linear-gradient(160deg, #2A0D0D 0%, #0F0A0A 60%, #02060B 100%)",
-        borderBottom: "1px solid rgba(255,48,48,0.14)",
+        borderBottom: "1px solid rgba(209,67,67,0.14)",
       }}
     >
       {/* Soft red glow */}
@@ -179,7 +180,7 @@ function CardVisual({
           width: "60%",
           height: "60%",
           background:
-            "radial-gradient(ellipse, rgba(255,48,48,0.20), transparent 70%)",
+            "radial-gradient(ellipse, rgba(209,67,67,0.20), transparent 70%)",
           filter: "blur(12px)",
         }}
         aria-hidden
@@ -272,8 +273,8 @@ function PhoneVisual() {
           style={{
             marginTop: "8px",
             padding: "8px",
-            background: "rgba(255,48,48,0.16)",
-            border: `1px solid rgba(255,48,48,0.30)`,
+            background: "rgba(209,67,67,0.16)",
+            border: `1px solid rgba(209,67,67,0.30)`,
             borderRadius: "8px",
           }}
         >
@@ -283,7 +284,7 @@ function PhoneVisual() {
               fontWeight: 900,
               color: C.text,
               fontVariantNumeric: "tabular-nums",
-              lineHeight: 1,
+              lineHeight: 1.05,
             }}
           >
             19:30
@@ -311,7 +312,7 @@ function PhoneVisual() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              letterSpacing: "0.04em",
+              letterSpacing: "0.06em",
             }}
           >
             CONFIRMER
@@ -398,7 +399,7 @@ function PosVisual() {
         <div
           style={{
             height: "8px",
-            background: "rgba(255,48,48,0.30)",
+            background: "rgba(209,67,67,0.30)",
             borderRadius: "3px",
             marginBottom: "4px",
           }}
@@ -410,11 +411,11 @@ function PosVisual() {
               style={{
                 backgroundColor:
                   i === 0 || i === 5
-                    ? "rgba(255,48,48,0.40)"
+                    ? "rgba(209,67,67,0.40)"
                     : "rgba(255,255,255,0.06)",
                 border:
                   i === 0 || i === 5
-                    ? `1px solid rgba(255,48,48,0.60)`
+                    ? `1px solid rgba(209,67,67,0.60)`
                     : "1px solid rgba(255,255,255,0.06)",
                 borderRadius: "3px",
               }}

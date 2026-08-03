@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -52,12 +53,12 @@ export default async function ThemePage({
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "120px clamp(48px, 6vw, 80px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.hero,
+        paddingInline: gutter,
         minHeight: "70vh",
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <nav style={{ marginBottom: "20px" }}>
           <Link
             href="/blog"
@@ -74,7 +75,7 @@ export default async function ThemePage({
             color: C.orange,
             fontSize: "12px",
             fontWeight: 800,
-            letterSpacing: "0.16em",
+            letterSpacing: "0.14em",
             textTransform: "uppercase",
             marginBottom: "12px",
           }}
@@ -83,9 +84,9 @@ export default async function ThemePage({
         </p>
         <h1
           style={{
-            fontSize: "clamp(32px, 4.4vw, 50px)",
-            lineHeight: 1.08,
-            fontWeight: 850,
+            fontSize: "clamp(28px, 3.8vw, 42px)",
+            lineHeight: 1.15,
+            fontWeight: 900,
             color: C.text,
             letterSpacing: "-0.02em",
             marginBottom: "40px",
@@ -116,9 +117,9 @@ export default async function ThemePage({
                   <span
                     className="inline-flex items-center gap-2"
                     style={{
-                      fontSize: "10.5px",
+                      fontSize: "11px",
                       fontWeight: 800,
-                      letterSpacing: "0.08em",
+                      letterSpacing: "0.06em",
                       textTransform: "uppercase",
                       color: C.orange,
                     }}
@@ -131,7 +132,7 @@ export default async function ThemePage({
                           color: "#1A0700",
                           borderRadius: "4px",
                           padding: "1px 6px",
-                          letterSpacing: "0.04em",
+                          letterSpacing: "0.06em",
                         }}
                       >
                         {a.draft ? "Brouillon" : "Programmé"}
@@ -150,7 +151,7 @@ export default async function ThemePage({
                   style={{
                     fontSize: "17px",
                     fontWeight: 800,
-                    lineHeight: 1.3,
+                    lineHeight: 1.25,
                     color: C.text,
                     marginBottom: "10px",
                   }}
@@ -159,8 +160,8 @@ export default async function ThemePage({
                 </h2>
                 <p
                   style={{
-                    fontSize: "13.5px",
-                    lineHeight: 1.55,
+                    fontSize: "14px",
+                    lineHeight: 1.6,
                     color: C.textSubtle,
                     marginBottom: "16px",
                   }}

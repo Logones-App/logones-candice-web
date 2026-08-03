@@ -1,18 +1,20 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import { Check, AlertTriangle, ChevronRight } from "lucide-react";
 import { HACCP as C } from "./palette";
 
 export function HaccpDashboardSection() {
   return (
     <section
+      id="features"
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(28px, 4vw, 40px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.compact,
+        paddingInline: gutter,
       }}
     >
       <div
         className="mx-auto grid items-start gap-10 lg:grid-cols-[30fr_70fr] lg:gap-10"
-        style={{ maxWidth: "1280px" }}
+        style={{ maxWidth: container }}
       >
         {/* LEFT — TEXT */}
         <div className="lg:sticky lg:top-24">
@@ -30,9 +32,9 @@ export function HaccpDashboardSection() {
           </p>
           <h2
             style={{
-              fontSize: "clamp(28px, 4vw, 38px)",
-              lineHeight: 1.1,
-              fontWeight: 850,
+              fontSize: "clamp(28px, 3.8vw, 42px)",
+              lineHeight: 1.15,
+              fontWeight: 900,
               color: C.text,
               marginBottom: "20px",
             }}
@@ -46,8 +48,8 @@ export function HaccpDashboardSection() {
           </h2>
           <p
             style={{
-              fontSize: "16px",
-              lineHeight: 1.65,
+              fontSize: "15px",
+              lineHeight: 1.6,
               color: C.textSubtle,
               marginBottom: "26px",
             }}
@@ -69,7 +71,7 @@ export function HaccpDashboardSection() {
                 className="flex items-center"
                 style={{
                   gap: "10px",
-                  fontSize: "14.5px",
+                  fontSize: "15px",
                   fontWeight: 600,
                   color: "rgba(255,255,255,0.82)",
                 }}
@@ -208,9 +210,9 @@ function ConformiteGlobaleCard() {
           <p
             style={{
               fontSize: "26px",
-              fontWeight: 850,
+              fontWeight: 900,
               color: C.text,
-              lineHeight: 1,
+              lineHeight: 1.05,
             }}
           >
             92 %
@@ -274,7 +276,7 @@ function RepartitionParThemeCard() {
           <li key={t.label}>
             <div
               className="flex items-center justify-between"
-              style={{ fontSize: "10.5px", marginBottom: "3px" }}
+              style={{ fontSize: "11px", marginBottom: "3px" }}
             >
               <span style={{ color: C.text, fontWeight: 600 }}>{t.label}</span>
               <span
@@ -417,7 +419,7 @@ function AlertesPrioritairesCard() {
           href="#"
           className="inline-flex items-center gap-0.5"
           style={{
-            fontSize: "10.5px",
+            fontSize: "11px",
             color: C.green,
             fontWeight: 700,
           }}
@@ -433,10 +435,10 @@ function AlertesPrioritairesCard() {
             key={a.label}
             className="flex items-start gap-2 rounded-lg"
             style={{
-              backgroundColor: "rgba(2,11,8,0.55)",
+              backgroundColor: "rgba(2,6,11,0.55)",
               border: `1px solid ${C.borderSoft}`,
               padding: "9px 11px",
-              fontSize: "10.5px",
+              fontSize: "11px",
             }}
           >
             <span

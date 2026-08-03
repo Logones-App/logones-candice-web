@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../lib/spacing";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -53,20 +54,20 @@ export function BlogLatest() {
       id="derniers-articles"
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(48px, 6vw, 72px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div
           className="flex items-end justify-between gap-4"
           style={{ marginBottom: "28px" }}
         >
           <h2
             style={{
-              fontSize: "clamp(24px, 3vw, 34px)",
-              lineHeight: 1.1,
-              fontWeight: 850,
+              fontSize: "clamp(24px, 3vw, 32px)",
+              lineHeight: 1.15,
+              fontWeight: 900,
               color: C.text,
             }}
           >
@@ -75,7 +76,7 @@ export function BlogLatest() {
           <Link
             href="#"
             className="inline-flex shrink-0 items-center gap-1.5 transition-transform hover:translate-x-0.5"
-            style={{ fontSize: "14px", fontWeight: 800, color: C.orange }}
+            style={{ fontSize: "14px", fontWeight: 800, color: C.orangeOnPaper }}
           >
             Voir tous les articles
             <ArrowRight size={15} strokeWidth={2.5} />
@@ -100,7 +101,7 @@ export function BlogLatest() {
                 style={{
                   height: "160px",
                   background:
-                    "linear-gradient(135deg, rgba(255,106,26,0.16), rgba(7,17,31,0.08))",
+                    "linear-gradient(135deg, rgba(226,104,24,0.16), rgba(7,17,31,0.08))",
                 }}
                 aria-hidden
               >
@@ -125,9 +126,9 @@ export function BlogLatest() {
                 >
                   <span
                     style={{
-                      fontSize: "10.5px",
+                      fontSize: "11px",
                       fontWeight: 800,
-                      letterSpacing: "0.08em",
+                      letterSpacing: "0.06em",
                       textTransform: "uppercase",
                       color: C.orange,
                     }}
@@ -142,7 +143,7 @@ export function BlogLatest() {
                   style={{
                     fontSize: "15px",
                     fontWeight: 800,
-                    lineHeight: 1.3,
+                    lineHeight: 1.25,
                     color: C.text,
                     marginBottom: "8px",
                   }}
@@ -152,7 +153,7 @@ export function BlogLatest() {
                 <p
                   style={{
                     fontSize: "13px",
-                    lineHeight: 1.55,
+                    lineHeight: 1.6,
                     color: C.textSubtle,
                     marginBottom: "16px",
                   }}

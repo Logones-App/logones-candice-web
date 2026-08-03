@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import { BookOpenCheck, AlertTriangle, BarChart3, Check, X } from "lucide-react";
 import { HACCP as C } from "./palette";
 
@@ -6,11 +7,11 @@ export function HaccpProblems() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(16px, 2vw, 28px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.tight,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div
           className="relative overflow-hidden"
           style={{
@@ -54,9 +55,9 @@ export function HaccpProblems() {
             </p>
             <h2
               style={{
-                fontSize: "clamp(30px, 4.5vw, 42px)",
-                lineHeight: 1.08,
-                fontWeight: 850,
+                fontSize: "clamp(28px, 3.8vw, 42px)",
+                lineHeight: 1.15,
+                fontWeight: 900,
                 color: C.text,
                 marginBottom: "10px",
               }}
@@ -149,18 +150,18 @@ function ProblemCard({
 
         <h3
           style={{
-            fontSize: "18px",
-            fontWeight: 850,
+            fontSize: "17px",
+            fontWeight: 900,
             color: C.text,
             marginBottom: "12px",
-            lineHeight: 1.2,
+            lineHeight: 1.25,
           }}
         >
           {title}
         </h3>
         <p
           style={{
-            fontSize: "14.5px",
+            fontSize: "15px",
             lineHeight: 1.6,
             color: C.textSubtle,
             marginBottom: "22px",
@@ -186,7 +187,7 @@ function JournalOfficielWidget() {
   return (
     <div
       style={{
-        background: "rgba(2,11,8,0.55)",
+        background: "rgba(2,6,11,0.55)",
         border: `1px solid ${C.borderSoft}`,
         borderRadius: "12px",
         padding: "14px",
@@ -220,7 +221,7 @@ function JournalOfficielWidget() {
                   fontSize: "8.5px",
                   fontWeight: 900,
                   padding: "1px 5px",
-                  letterSpacing: "0.04em",
+                  letterSpacing: "0.06em",
                   flexShrink: 0,
                 }}
               >
@@ -240,7 +241,7 @@ function JournalOfficielWidget() {
             )}
             <div>
               <p style={{ color: C.text, fontWeight: 700 }}>{u.ref}</p>
-              <p style={{ color: C.textMuted, fontSize: "10.5px" }}>{u.note}</p>
+              <p style={{ color: C.textMuted, fontSize: "11px" }}>{u.note}</p>
             </div>
           </li>
         ))}
@@ -259,7 +260,7 @@ function TableauReleveWidget() {
   return (
     <div
       style={{
-        background: "rgba(2,11,8,0.55)",
+        background: "rgba(2,6,11,0.55)",
         border: `1px solid ${C.borderSoft}`,
         borderRadius: "12px",
         padding: "12px",
@@ -273,7 +274,7 @@ function TableauReleveWidget() {
           fontSize: "9px",
           fontWeight: 700,
           color: C.textMuted,
-          letterSpacing: "0.04em",
+          letterSpacing: "0.06em",
           textTransform: "uppercase",
           paddingBottom: "6px",
           borderBottom: `1px solid ${C.borderSoft}`,
@@ -328,7 +329,7 @@ function CompletudeWidget() {
   return (
     <div
       style={{
-        background: "rgba(2,11,8,0.55)",
+        background: "rgba(2,6,11,0.55)",
         border: `1px solid ${C.borderSoft}`,
         borderRadius: "12px",
         padding: "14px",
@@ -348,8 +349,8 @@ function CompletudeWidget() {
         </p>
         <p
           style={{
-            fontSize: "18px",
-            fontWeight: 850,
+            fontSize: "17px",
+            fontWeight: 900,
             color: C.text,
             fontVariantNumeric: "tabular-nums",
           }}

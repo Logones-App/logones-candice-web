@@ -1,21 +1,36 @@
+import { ground, modules, onNight, onPaper, status } from "../../lib/tokens";
+
+const M = modules.reservation;
+
+/** Alias du module Réservation vers les tokens. Aucune couleur propre ici. */
 export const RES = {
-  bg: "#02060B",
-  bgSecondary: "#071016",
-  card: "#0A121A",
-  cardLighter: "#0F1A24",
-  red: "#E02020",
-  redAccent: "#FF3030",
-  redDeep: "#7A1111",
-  redSoft: "rgba(255,48,48,0.16)",
-  redSofter: "rgba(255,48,48,0.08)",
-  text: "#FFFFFF",
-  textSubtle: "rgba(255,255,255,0.72)",
-  textMuted: "rgba(255,255,255,0.52)",
-  border: "rgba(255,48,48,0.18)",
-  borderSoft: "rgba(255,255,255,0.06)",
-  // Light section
-  lightBg: "#F6F1EA",
-  lightInk: "#111111",
-  lightInkSubtle: "rgba(17,17,17,0.70)",
-  green: "#22C55E",
+  bg: ground.night,
+  bgSecondary: ground.nightSurface,
+  card: ground.nightSurface,
+  cardLighter: ground.nightSurfaceHigh,
+
+  /** Rouge brique, désaturé pour ne plus se lire comme une alarme. */
+  red: M.accent,
+  redAccent: M.light,
+  redDeep: M.deep,
+  redSoft: M.soft,
+  redSofter: M.softer,
+
+  /** Bouton : blanc sur rouge brique, 5,1:1. */
+  buttonFrom: M.buttonFrom,
+  buttonTo: M.buttonTo,
+  onButton: M.onButton,
+
+  text: onNight.text,
+  textSubtle: onNight.subtle,
+  textMuted: onNight.muted,
+  border: M.border,
+  borderSoft: onNight.borderSoft,
+
+  // Section claire
+  lightBg: ground.paper,
+  lightInk: onPaper.text,
+  lightInkSubtle: onPaper.subtle,
+
+  green: status.success.night,
 } as const;

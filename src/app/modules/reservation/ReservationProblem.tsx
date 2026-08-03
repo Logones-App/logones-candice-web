@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import type { LucideIcon } from "lucide-react";
 import { ListX, Receipt, Unplug } from "lucide-react";
 import { RES as C } from "./palette";
@@ -43,17 +44,17 @@ export function ReservationProblem() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(20px, 3vw, 40px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.compact,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div
           className="relative overflow-hidden"
           style={{
             background:
               "linear-gradient(180deg, rgba(10,18,26,0.96), rgba(4,8,12,0.98))",
-            border: `1px solid rgba(255,48,48,0.16)`,
+            border: `1px solid rgba(209,67,67,0.16)`,
             borderRadius: "20px",
             padding: "clamp(36px, 4.5vw, 54px) clamp(24px, 4vw, 60px)",
             boxShadow:
@@ -70,7 +71,7 @@ export function ReservationProblem() {
               width: "500px",
               height: "300px",
               background:
-                "radial-gradient(ellipse, rgba(255,48,48,0.14), transparent 70%)",
+                "radial-gradient(ellipse, rgba(209,67,67,0.14), transparent 70%)",
               filter: "blur(20px)",
             }}
             aria-hidden
@@ -80,9 +81,9 @@ export function ReservationProblem() {
           <h2
             className="relative mx-auto text-center"
             style={{
-              fontSize: "clamp(26px, 3.6vw, 34px)",
+              fontSize: "clamp(24px, 3vw, 32px)",
               lineHeight: 1.15,
-              fontWeight: 850,
+              fontWeight: 900,
               color: C.text,
               maxWidth: "780px",
               marginBottom: "40px",
@@ -155,7 +156,7 @@ export function ReservationProblem() {
                         left: "16px",
                         fontSize: "10px",
                         fontWeight: 900,
-                        letterSpacing: "0.12em",
+                        letterSpacing: "0.14em",
                         textTransform: "uppercase",
                         color: color,
                         backgroundColor: "rgba(0,0,0,0.45)",
@@ -173,9 +174,9 @@ export function ReservationProblem() {
                     <h3
                       style={{
                         fontSize: "20px",
-                        fontWeight: 850,
+                        fontWeight: 900,
                         color: C.text,
-                        lineHeight: 1.2,
+                        lineHeight: 1.25,
                         marginBottom: "10px",
                       }}
                     >
@@ -183,7 +184,7 @@ export function ReservationProblem() {
                     </h3>
                     <p
                       style={{
-                        fontSize: "14.5px",
+                        fontSize: "15px",
                         lineHeight: 1.6,
                         color: C.textSubtle,
                       }}

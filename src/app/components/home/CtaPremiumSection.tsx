@@ -1,22 +1,25 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import Link from "next/link";
 import Image from "next/image";
 
-const ORANGE = "#FF7000";
-const ORANGE_LIGHT = "#FF8A24";
-const ORANGE_DEEP = "#CC5800";
+import { brand, ground } from "../../lib/tokens";
+
+const ORANGE = brand.orange;
+const ORANGE_LIGHT = brand.orangeLight;
+const ORANGE_DEEP = brand.orangeDeep;
 
 export function CtaPremiumSection() {
   return (
     <section
       style={{
-        backgroundColor: "#FAF7F2",
-        paddingBlock: "clamp(32px, 4vw, 48px)",
-        paddingInline: "clamp(20px, 3vw, 32px)",
+        backgroundColor: ground.paper,
+        paddingBlock: rhythm.compact,
+        paddingInline: gutter,
       }}
     >
       <div
         className="mx-auto"
-        style={{ maxWidth: "1280px" }}
+        style={{ maxWidth: container }}
       >
         <div
           className="relative overflow-hidden"
@@ -53,7 +56,7 @@ export function CtaPremiumSection() {
             className="absolute inset-0 z-[1]"
             style={{
               background:
-                "radial-gradient(circle at 80% 50%, rgba(255,112,0,0.15), transparent 35%)",
+                "radial-gradient(circle at 80% 50%, rgba(226,104,24,0.15), transparent 35%)",
             }}
             aria-hidden
           />
@@ -67,7 +70,7 @@ export function CtaPremiumSection() {
               width: "360px",
               height: "220px",
               background:
-                "radial-gradient(circle, rgba(255,112,0,0.18), transparent 62%)",
+                "radial-gradient(circle, rgba(226,104,24,0.18), transparent 62%)",
               filter: "blur(18px)",
             }}
             aria-hidden
@@ -85,10 +88,10 @@ export function CtaPremiumSection() {
                 className="text-white"
                 style={{
                   fontFamily: "var(--font-poppins), sans-serif",
-                  fontSize: "clamp(28px, 4vw, 42px)",
-                  lineHeight: 1.08,
+                  fontSize: "clamp(28px, 3.8vw, 42px)",
+                  lineHeight: 1.15,
                   fontWeight: 900,
-                  letterSpacing: "-0.03em",
+                  letterSpacing: "-0.02em",
                   marginBottom: "18px",
                 }}
               >
@@ -96,7 +99,7 @@ export function CtaPremiumSection() {
               </h2>
               <p
                 style={{
-                  fontSize: "clamp(16px, 1.5vw, 20px)",
+                  fontSize: "clamp(16px, 1.5vw, 19px)",
                   lineHeight: 1.45,
                   color: "rgba(255,255,255,0.76)",
                   fontWeight: 500,
@@ -110,16 +113,17 @@ export function CtaPremiumSection() {
               <div className="flex flex-wrap items-center gap-4 sm:gap-5">
                 <Link
                   href="/demo"
-                  className="inline-flex items-center justify-center rounded-full text-white transition-all hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center rounded-full transition-all hover:-translate-y-0.5"
                   style={{
                     height: "58px",
                     padding: "0 32px",
                     background: `linear-gradient(135deg, ${ORANGE_LIGHT} 0%, ${ORANGE} 45%, ${ORANGE_DEEP} 100%)`,
-                    fontSize: "16px",
+                    color: "#1A0A00",
+                    fontSize: "15px",
                     fontWeight: 800,
                     fontFamily: "var(--font-poppins), sans-serif",
                     boxShadow:
-                      "0 14px 32px rgba(255,112,0,0.35), inset 0 1px 0 rgba(255,255,255,0.28)",
+                      "0 14px 32px rgba(226,104,24,0.35), inset 0 1px 0 rgba(255,255,255,0.28)",
                   }}
                   aria-label="Demander une démo personnalisée"
                 >
@@ -133,7 +137,7 @@ export function CtaPremiumSection() {
                     height: "58px",
                     padding: "0 32px",
                     background: "rgba(255,255,255,0.04)",
-                    fontSize: "16px",
+                    fontSize: "15px",
                     fontWeight: 800,
                     fontFamily: "var(--font-poppins), sans-serif",
                     border: "1px solid rgba(255,255,255,0.28)",

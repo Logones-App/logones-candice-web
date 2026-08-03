@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import type { LucideIcon } from "lucide-react";
 import {
   CalendarClock,
@@ -47,13 +48,13 @@ export function RhFonctionnalites() {
       id="features"
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(28px, 4vw, 48px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.compact,
+        paddingInline: gutter,
       }}
     >
       <div
         className="mx-auto"
-        style={{ maxWidth: "1280px" }}
+        style={{ maxWidth: container }}
       >
         <div className="text-center" style={{ marginBottom: "36px" }}>
           <p
@@ -70,9 +71,9 @@ export function RhFonctionnalites() {
           </p>
           <h2
             style={{
-              fontSize: "clamp(28px, 3.8vw, 40px)",
-              lineHeight: 1.1,
-              fontWeight: 850,
+              fontSize: "clamp(28px, 3.8vw, 42px)",
+              lineHeight: 1.15,
+              fontWeight: 900,
               color: C.text,
               maxWidth: "780px",
               margin: "0 auto",
@@ -129,10 +130,10 @@ export function RhFonctionnalites() {
                 </div>
                 <h3
                   style={{
-                    fontSize: "16px",
-                    fontWeight: 850,
+                    fontSize: "15px",
+                    fontWeight: 900,
                     color: C.text,
-                    lineHeight: 1.2,
+                    lineHeight: 1.25,
                     marginBottom: "10px",
                   }}
                 >
@@ -141,7 +142,7 @@ export function RhFonctionnalites() {
                 <p
                   style={{
                     fontSize: "13px",
-                    lineHeight: 1.55,
+                    lineHeight: 1.6,
                     color: C.textSubtle,
                   }}
                 >
@@ -179,7 +180,7 @@ export function RhFonctionnalites() {
           <p
             style={{
               fontSize: "14px",
-              lineHeight: 1.55,
+              lineHeight: 1.6,
               color: "rgba(255,255,255,0.84)",
               fontWeight: 500,
             }}

@@ -1,21 +1,29 @@
+import { brand, ground, onNight, onPaper } from "../lib/tokens";
+
+/** Alias de la page « à propos » vers les tokens. Aucune couleur propre ici. */
 export const ABOUT = {
-  bg: "#FAF7F2",
-  bgDark: "#061225",
-  bgDarkDeep: "#020817",
-  card: "#FFFFFF",
-  cardDark: "#0B1A30",
-  orange: "#FF6A2A",
-  orangeDeep: "#FF5A1F",
-  orangeSoft: "rgba(255,106,42,0.10)",
-  orangeBorder: "rgba(255,106,42,0.30)",
-  text: "#1E293B",
-  textSubtle: "rgba(30,41,59,0.74)",
-  textMuted: "rgba(30,41,59,0.52)",
-  textOnDark: "#FAF7F2",
-  textOnDarkSubtle: "#D8DEE9",
-  textOnDarkMuted: "rgba(216,222,233,0.62)",
-  border: "rgba(30,41,59,0.10)",
-  borderSoft: "rgba(30,41,59,0.06)",
-  borderOnDark: "rgba(255,255,255,0.12)",
-  borderOnDarkSoft: "rgba(255,255,255,0.06)",
+  bg: ground.paper,
+  bgDark: ground.night,
+  bgDarkDeep: ground.nightDeep,
+  card: ground.card,
+  cardDark: ground.nightSurface,
+
+  orange: brand.orange,
+  orangeDeep: brand.orangeDeep,
+  /** Orange lisible sur papier ou carte blanche (5,01:1). brand.orange n'y passe pas (3,05:1). */
+  orangeOnPaper: brand.orangeDeep,
+  orangeSoft: brand.orangeSoft,
+  orangeBorder: brand.orangeBorder,
+
+  text: onPaper.text,
+  textSubtle: onPaper.subtle,
+  textMuted: onPaper.muted,
+  textOnDark: onNight.text,
+  textOnDarkSubtle: onNight.subtle,
+  textOnDarkMuted: onNight.muted,
+
+  border: onPaper.border,
+  borderSoft: onPaper.borderSoft,
+  borderOnDark: onNight.border,
+  borderOnDarkSoft: onNight.borderSoft,
 } as const;

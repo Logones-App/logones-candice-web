@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../lib/spacing";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Clock, TrendingUp } from "lucide-react";
@@ -9,11 +10,11 @@ export function BlogFeatured() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(24px, 3vw, 40px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.compact,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <article
           className="grid gap-0 overflow-hidden lg:grid-cols-[1.1fr_1fr_0.7fr]"
           style={{
@@ -38,7 +39,7 @@ export function BlogFeatured() {
                 className="absolute inset-0"
                 style={{
                   background:
-                    "linear-gradient(135deg, rgba(255,106,26,0.18), rgba(7,17,31,0.10))",
+                    "linear-gradient(135deg, rgba(226,104,24,0.18), rgba(7,17,31,0.10))",
                 }}
                 aria-hidden
               />
@@ -53,9 +54,9 @@ export function BlogFeatured() {
             <span
               className="inline-flex w-fit items-center rounded-full"
               style={{
-                fontSize: "10.5px",
+                fontSize: "11px",
                 fontWeight: 900,
-                letterSpacing: "0.12em",
+                letterSpacing: "0.14em",
                 textTransform: "uppercase",
                 color: "#FFFFFF",
                 background: C.orange,
@@ -67,17 +68,17 @@ export function BlogFeatured() {
             </span>
             <h2
               style={{
-                fontSize: "clamp(20px, 2.2vw, 26px)",
-                lineHeight: 1.2,
-                fontWeight: 850,
+                fontSize: "clamp(20px, 2.4vw, 26px)",
+                lineHeight: 1.25,
+                fontWeight: 900,
                 color: C.text,
                 marginBottom: "12px",
-                letterSpacing: "-0.01em",
+                letterSpacing: "-0.02em",
               }}
             >
               <Link
                 href="/blog/rentabilite/cout-cache-logiciel-restaurant"
-                className="transition-colors hover:text-[#FF6A1A]"
+                className="transition-colors hover:text-[color:var(--gold-light)]"
               >
                 Pourquoi votre logiciel restaurant vous coûte plus cher que
                 vous ne le pensez.
@@ -85,7 +86,7 @@ export function BlogFeatured() {
             </h2>
             <p
               style={{
-                fontSize: "14.5px",
+                fontSize: "15px",
                 lineHeight: 1.6,
                 color: C.textSubtle,
                 marginBottom: "20px",
@@ -97,7 +98,7 @@ export function BlogFeatured() {
             <div className="flex items-center gap-4">
               <span
                 className="inline-flex items-center gap-1.5"
-                style={{ fontSize: "12.5px", color: C.textMuted, fontWeight: 600 }}
+                style={{ fontSize: "13px", color: C.textMuted, fontWeight: 600 }}
               >
                 <Clock size={13} strokeWidth={2} />
                 10 min de lecture
@@ -106,7 +107,7 @@ export function BlogFeatured() {
             <Link
               href="/blog/rentabilite/cout-cache-logiciel-restaurant"
               className="mt-5 inline-flex w-fit items-center gap-1.5 transition-transform hover:translate-x-0.5"
-              style={{ fontSize: "14px", fontWeight: 800, color: C.orange }}
+              style={{ fontSize: "14px", fontWeight: 800, color: C.orangeOnPaper }}
             >
               Lire l&apos;article
               <ArrowRight size={15} strokeWidth={2.5} />
@@ -126,7 +127,7 @@ export function BlogFeatured() {
               style={{
                 width: "42px",
                 height: "42px",
-                background: "rgba(255,106,26,0.14)",
+                background: "rgba(226,104,24,0.14)",
                 border: `1px solid ${C.orangeBorder}`,
                 color: C.orange,
                 marginBottom: "16px",
@@ -137,10 +138,10 @@ export function BlogFeatured() {
             </span>
             <p
               style={{
-                fontSize: "clamp(40px, 5vw, 56px)",
-                fontWeight: 850,
+                fontSize: "clamp(36px, 5vw, 56px)",
+                fontWeight: 900,
                 color: C.orange,
-                lineHeight: 1,
+                lineHeight: 1.05,
                 letterSpacing: "-0.02em",
                 marginBottom: "10px",
               }}
@@ -150,7 +151,7 @@ export function BlogFeatured() {
             <p
               style={{
                 fontSize: "14px",
-                lineHeight: 1.5,
+                lineHeight: 1.45,
                 color: C.textOnDarkSubtle,
               }}
             >

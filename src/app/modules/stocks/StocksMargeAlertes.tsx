@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import { TrendingUp, AlertTriangle, ArrowUpRight, ArrowDownRight } from "lucide-react";
 import { STOCKS as C } from "./palette";
 
@@ -6,11 +7,11 @@ export function StocksMargeAlertes() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(40px, 5vw, 64px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div className="text-center" style={{ marginBottom: "44px" }}>
           <p
             style={{
@@ -26,9 +27,9 @@ export function StocksMargeAlertes() {
           </p>
           <h2
             style={{
-              fontSize: "clamp(28px, 4vw, 40px)",
-              lineHeight: 1.1,
-              fontWeight: 850,
+              fontSize: "clamp(28px, 3.8vw, 42px)",
+              lineHeight: 1.15,
+              fontWeight: 900,
               color: C.text,
               maxWidth: "800px",
               margin: "0 auto 14px",
@@ -39,7 +40,7 @@ export function StocksMargeAlertes() {
           </h2>
           <p
             style={{
-              fontSize: "16px",
+              fontSize: "15px",
               lineHeight: 1.6,
               color: C.textSubtle,
               maxWidth: "700px",
@@ -98,8 +99,8 @@ function MargeCard() {
           </div>
           <h3
             style={{
-              fontSize: "18px",
-              fontWeight: 850,
+              fontSize: "17px",
+              fontWeight: 900,
               color: C.text,
               marginBottom: "6px",
             }}
@@ -114,9 +115,9 @@ function MargeCard() {
           <p
             style={{
               fontSize: "26px",
-              fontWeight: 850,
+              fontWeight: 900,
               color: C.yellow,
-              lineHeight: 1,
+              lineHeight: 1.05,
               fontVariantNumeric: "tabular-nums",
             }}
           >
@@ -256,8 +257,8 @@ function AlertesCard() {
           </div>
           <h3
             style={{
-              fontSize: "18px",
-              fontWeight: 850,
+              fontSize: "17px",
+              fontWeight: 900,
               color: C.text,
               marginBottom: "6px",
             }}
@@ -272,9 +273,9 @@ function AlertesCard() {
           <p
             style={{
               fontSize: "26px",
-              fontWeight: 850,
+              fontWeight: 900,
               color: C.yellow,
-              lineHeight: 1,
+              lineHeight: 1.05,
               fontVariantNumeric: "tabular-nums",
             }}
           >
@@ -313,7 +314,7 @@ function AlertesCard() {
             </span>
             <div className="flex-1 min-w-0">
               <div className="flex items-center justify-between gap-2">
-                <p style={{ fontSize: "13.5px", color: C.text, fontWeight: 700 }}>
+                <p style={{ fontSize: "14px", color: C.text, fontWeight: 700 }}>
                   {a.title}
                 </p>
                 <span

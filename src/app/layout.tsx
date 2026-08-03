@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { fraunces, poppins, anton, caveat } from "./fonts";
+import { poppins, archivo } from "./fonts";
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./components/layout/Footer";
 import { CookieBanner } from "./components/layout/CookieBanner";
+import { cssVariables } from "./lib/tokens";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -29,8 +30,16 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${fraunces.variable} ${poppins.variable} ${anton.variable} ${caveat.variable} h-full antialiased`}
+      className={`${poppins.variable} ${archivo.variable} h-full antialiased`}
     >
+      <head>
+        {/* Palette du site, produite par src/app/lib/tokens.ts.
+            Rendue côté serveur : les couleurs sont là au premier paint. */}
+        <style
+          id="logones-tokens"
+          dangerouslySetInnerHTML={{ __html: cssVariables() }}
+        />
+      </head>
       <body
         className="ardoise-bg min-h-screen text-text-primary antialiased"
         style={{ fontFamily: "var(--font-poppins), system-ui, sans-serif" }}

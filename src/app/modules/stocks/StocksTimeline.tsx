@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import { Clock, X, Check } from "lucide-react";
 import { STOCKS as C } from "./palette";
 
@@ -20,11 +21,11 @@ export function StocksTimeline() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(56px, 6vw, 80px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div className="text-center" style={{ marginBottom: "44px" }}>
           <p
             style={{
@@ -40,9 +41,9 @@ export function StocksTimeline() {
           </p>
           <h2
             style={{
-              fontSize: "clamp(28px, 4.2vw, 42px)",
-              lineHeight: 1.08,
-              fontWeight: 850,
+              fontSize: "clamp(28px, 3.8vw, 42px)",
+              lineHeight: 1.15,
+              fontWeight: 900,
               color: C.text,
               maxWidth: "780px",
               margin: "0 auto 14px",
@@ -53,7 +54,7 @@ export function StocksTimeline() {
           </h2>
           <p
             style={{
-              fontSize: "16px",
+              fontSize: "15px",
               lineHeight: 1.6,
               color: C.textSubtle,
               maxWidth: "640px",
@@ -96,7 +97,7 @@ export function StocksTimeline() {
                 <h3
                   style={{
                     fontSize: "22px",
-                    fontWeight: 850,
+                    fontWeight: 900,
                     color: C.text,
                   }}
                 >
@@ -216,7 +217,7 @@ export function StocksTimeline() {
                 <h3
                   style={{
                     fontSize: "22px",
-                    fontWeight: 850,
+                    fontWeight: 900,
                     color: C.text,
                   }}
                 >
@@ -227,9 +228,9 @@ export function StocksTimeline() {
                 className="inline-flex items-center gap-1.5 rounded-full"
                 style={{
                   fontSize: "12px",
-                  fontWeight: 850,
-                  color: "#1A1000",
-                  background: `linear-gradient(135deg, ${C.yellow}, ${C.yellowDeep})`,
+                  fontWeight: 900,
+                  color: C.onButton,
+                  background: `linear-gradient(135deg, ${C.buttonFrom}, ${C.buttonTo})`,
                   padding: "6px 12px",
                   boxShadow: "0 8px 22px rgba(255,196,0,0.32)",
                 }}

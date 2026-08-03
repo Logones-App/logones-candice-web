@@ -1,18 +1,33 @@
+import { ground, modules, onNight, status } from "../../lib/tokens";
+
+const M = modules.stocks;
+
+/** Alias du module Stocks vers les tokens. Aucune couleur propre ici. */
 export const STOCKS = {
-  bg: "#02060B",
-  bgSecondary: "#071016",
-  card: "#0A121A",
-  cardLighter: "#101923",
-  yellow: "#FFC400",
-  yellowDeep: "#F5A800",
-  yellowSoft: "rgba(255,196,0,0.16)",
-  yellowSofter: "rgba(255,196,0,0.08)",
-  orange: "#FFB000",
-  text: "#FFFFFF",
-  textSubtle: "rgba(255,255,255,0.72)",
-  textMuted: "rgba(255,255,255,0.52)",
-  border: "rgba(255,196,0,0.18)",
-  borderSoft: "rgba(255,255,255,0.06)",
-  red: "#EF4444",
-  green: "#22C55E",
+  bg: ground.night,
+  bgSecondary: ground.nightSurface,
+  card: ground.nightSurface,
+  cardLighter: ground.nightSurfaceHigh,
+
+  yellow: M.accent,
+  yellowDeep: M.deep,
+  yellowLight: M.light,
+  yellowSoft: M.soft,
+  yellowSofter: M.softer,
+  /** Ancien « orange » de la page : c'est le jaune profond, pas l'orange de marque. */
+  orange: M.deep,
+
+  /** Bouton : encre sombre sur jaune, 10,1:1 — le plus lisible du site. */
+  buttonFrom: M.buttonFrom,
+  buttonTo: M.buttonTo,
+  onButton: M.onButton,
+
+  text: onNight.text,
+  textSubtle: onNight.subtle,
+  textMuted: onNight.muted,
+  border: M.border,
+  borderSoft: onNight.borderSoft,
+
+  red: status.error.night,
+  green: status.success.night,
 } as const;

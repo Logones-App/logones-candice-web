@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../lib/spacing";
 import { Unplug, TrendingDown, Database, Lightbulb } from "lucide-react";
 import { ABOUT as C } from "./palette";
 
@@ -24,18 +25,18 @@ export function AboutConstats() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(48px, 6vw, 80px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div className="text-center" style={{ marginBottom: "44px" }}>
           <p
             style={{
-              color: C.orange,
+              color: C.orangeOnPaper,
               fontSize: "12px",
               fontWeight: 800,
-              letterSpacing: "0.18em",
+              letterSpacing: "0.14em",
               textTransform: "uppercase",
               marginBottom: "14px",
             }}
@@ -44,14 +45,14 @@ export function AboutConstats() {
           </p>
           <h2
             style={{
-              fontSize: "clamp(28px, 3.6vw, 42px)",
-              lineHeight: 1.1,
-              fontWeight: 850,
+              fontSize: "clamp(28px, 3.8vw, 42px)",
+              lineHeight: 1.15,
+              fontWeight: 900,
               color: C.text,
             }}
           >
             Trois constats.{" "}
-            <span style={{ color: C.orange }}>Une décision.</span>
+            <span style={{ color: C.orangeOnPaper }}>Une décision.</span>
           </h2>
         </div>
 
@@ -83,7 +84,7 @@ export function AboutConstats() {
               </div>
               <h3
                 style={{
-                  fontSize: "18px",
+                  fontSize: "17px",
                   fontWeight: 800,
                   color: C.text,
                   marginBottom: "12px",
@@ -94,8 +95,8 @@ export function AboutConstats() {
               </h3>
               <p
                 style={{
-                  fontSize: "14.5px",
-                  lineHeight: 1.65,
+                  fontSize: "15px",
+                  lineHeight: 1.6,
                   color: C.textSubtle,
                 }}
               >
@@ -111,7 +112,7 @@ export function AboutConstats() {
           style={{
             marginTop: "28px",
             background:
-              "linear-gradient(135deg, #FFF3EC 0%, #FAF7F2 60%, #FFF6EF 100%)",
+              "linear-gradient(135deg, #FFF3EC 0%, #F7F3EC 60%, #FFF6EF 100%)",
             border: `1px solid ${C.orangeBorder}`,
             borderRadius: "24px",
             padding: "clamp(36px, 4vw, 52px) clamp(24px, 4vw, 48px)",
@@ -133,11 +134,11 @@ export function AboutConstats() {
           </div>
           <h3
             style={{
-              fontSize: "clamp(24px, 3vw, 34px)",
-              fontWeight: 850,
+              fontSize: "clamp(24px, 3vw, 32px)",
+              fontWeight: 900,
               color: C.text,
               marginBottom: "12px",
-              letterSpacing: "-0.01em",
+              letterSpacing: "-0.02em",
             }}
           >
             Alors nous avons créé{" "}
@@ -145,8 +146,8 @@ export function AboutConstats() {
           </h3>
           <p
             style={{
-              fontSize: "16px",
-              lineHeight: 1.65,
+              fontSize: "15px",
+              lineHeight: 1.6,
               color: C.textSubtle,
               maxWidth: "620px",
               margin: "0 auto",

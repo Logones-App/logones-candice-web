@@ -2,73 +2,92 @@
 @import "tw-animate-css";
 
 /* =========================================================================
-   LOGONES DESIGN TOKENS — issus de SITE_SPEC.md v1.0
+   LOGONES DESIGN TOKENS
+   -------------------------------------------------------------------------
+   AUCUNE VALEUR DE COULEUR DANS CE FICHIER — elles vivent toutes dans
+   src/app/lib/tokens.ts, qui les injecte en `--tk-*` via app/layout.tsx.
+   Ici on ne fait que donner à Tailwind les noms qu'il attend.
+
+   Chaîne complète :  tokens.ts → --tk-* → --color-* → classe Tailwind
+
+   Deux règles portées par le système :
+     1. Un seul orange de marque, #E26818 — celui du logo BIMI.
+     2. L'accent d'un module identifie, il ne porte pas de texte : chaque
+        module a un couple de bouton distinct, vérifié au-dessus de 4,5:1.
    ========================================================================= */
 
 :root {
-  /* === FONDS === (base RAL 5004 noir bleuâtre / RAL 9016 blanc) */
-  --color-bg-base: #1F1F2D;
-  --color-bg-surface: #2B2B3E;
-  --color-bg-elevated: #3A3A50;
-  --color-bg-light: #F1F0EA;
-  --color-bg-light-alt: #E5E4DE;
+  /* === FONDS === */
+  --color-bg-base: var(--tk-night);         /* fond nuit unique */
+  --color-bg-surface: var(--tk-night-surface);
+  --color-bg-elevated: var(--tk-night-surface-high);
+  --color-bg-light: var(--tk-paper);        /* papier unique */
+  --color-bg-light-alt: var(--tk-paper-alt);
 
   /* === TEXTES === */
-  --color-text-primary: #F1F0EA;
-  --color-text-secondary: #A5A3B0;
-  --color-text-muted: #6E6D7C;
-  --color-text-dark: #1F1F2D;
-  --color-text-dark-sec: #4A4A58;
+  --color-text-primary: var(--tk-on-night-text);
+  --color-text-secondary: var(--tk-on-night-subtle);
+  --color-text-muted: var(--tk-on-night-muted);
+  --color-text-dark: var(--tk-on-paper-text);
+  --color-text-dark-sec: var(--tk-on-paper-subtle);
 
   /* === BORDURES === */
-  --color-border: rgba(241, 240, 234, 0.08);
-  --color-border-light: rgba(31, 31, 45, 0.14);
+  --color-border: var(--tk-on-night-border);
+  --color-border-light: var(--tk-on-paper-border);
 
-  /* === MODULE CAISSE — BLEU ARDOISE === */
-  --caisse-deep: #0D2B45;
-  --caisse-mid: #1A5276;
-  --caisse-bright: #2E86C1;
-  --caisse-accent: #5DADE2;
-  --caisse-glow: rgba(46, 134, 193, 0.15);
+  /* === MODULES ===
+     -deep / -mid = les deux bouts du dégradé de bouton (contraste vérifié)
+     -bright      = l'accent d'identité
+     -accent      = la variante claire */
+  --caisse-deep: var(--tk-caisse-button-to);
+  --caisse-mid: var(--tk-caisse-button-from);
+  --caisse-bright: var(--tk-caisse-accent);
+  --caisse-accent: var(--tk-caisse-light);
+  --caisse-glow: var(--tk-caisse-glow);
 
-  /* === MODULE HACCP — VERT FORÊT === */
-  --haccp-deep: #0D2B1A;
-  --haccp-mid: #1A6B3C;
-  --haccp-bright: #2D9B5A;
-  --haccp-accent: #4DBF7A;
-  --haccp-glow: rgba(45, 155, 90, 0.15);
+  --haccp-deep: var(--tk-haccp-button-to);
+  --haccp-mid: var(--tk-haccp-button-from);
+  --haccp-bright: var(--tk-haccp-accent);
+  --haccp-accent: var(--tk-haccp-light);
+  --haccp-glow: var(--tk-haccp-glow);
 
-  /* === MODULE RH — VIOLET PROFOND === */
-  --rh-deep: #1E1535;
-  --rh-mid: #3B2A6E;
-  --rh-bright: #5B4FBE;
-  --rh-accent: #8B7FE8;
-  --rh-glow: rgba(91, 79, 190, 0.15);
+  --rh-deep: var(--tk-rh-button-to);
+  --rh-mid: var(--tk-rh-button-from);
+  --rh-bright: var(--tk-rh-accent);
+  --rh-accent: var(--tk-rh-light);
+  --rh-glow: var(--tk-rh-glow);
 
-  /* === MODULE RÉSERVATION — CORAIL === */
-  --resa-deep: #3D1F10;
-  --resa-mid: #C0622A;
-  --resa-bright: #E07840;
-  --resa-accent: #F0A070;
-  --resa-glow: rgba(224, 120, 64, 0.15);
+  --resa-deep: var(--tk-reservation-button-to);
+  --resa-mid: var(--tk-reservation-button-from);
+  --resa-bright: var(--tk-reservation-accent);
+  --resa-accent: var(--tk-reservation-light);
+  --resa-glow: var(--tk-reservation-glow);
 
-  /* === MODULE STOCKS — OCRE NEUTRE === */
-  --stocks-deep: #2A2010;
-  --stocks-mid: #7A6030;
-  --stocks-bright: #B8901A;
-  --stocks-accent: #D4A840;
-  --stocks-glow: rgba(184, 144, 26, 0.15);
+  --stocks-deep: var(--tk-stocks-button-to);
+  --stocks-mid: var(--tk-stocks-button-from);
+  --stocks-bright: var(--tk-stocks-accent);
+  --stocks-accent: var(--tk-stocks-light);
+  --stocks-glow: var(--tk-stocks-glow);
 
-  /* === ORANGE LOGONES (identique au logo SVG officiel) === */
-  --gold-light: #FF7000;
-  --gold-mid: #CC5800;
-  --gold-pale: rgba(255, 112, 0, 0.12);
+  /* === ORANGE LOGONES (logo BIMI) ===
+     --gold-light ne porte pas de texte courant sur fond clair (3,05:1) :
+     sur papier, passer à --gold-mid (5,01:1). */
+  --gold-light: var(--tk-brand);
+  --gold-mid: var(--tk-brand-deep);
+  --gold-pale: var(--tk-brand-soft);
+  --gold-border: var(--tk-brand-border);
+  /* Texte posé sur un aplat orange plein : 5,73:1. Jamais de blanc. */
+  --on-gold: var(--tk-on-brand);
 
-  /* === SÉMANTIQUES === */
-  --color-success: #2D9B5A;
-  --color-warning: #D4A840;
-  --color-error: #C0392B;
-  --color-info: #2E86C1;
+  /* === SÉMANTIQUES === (suffixe -on-dark pour le fond nuit) */
+  --color-success: var(--tk-success);
+  --color-warning: var(--tk-warning);
+  --color-error: var(--tk-error);
+  --color-info: var(--tk-info);
+  --color-success-on-dark: var(--tk-success-on-dark);
+  --color-warning-on-dark: var(--tk-warning-on-dark);
+  --color-error-on-dark: var(--tk-error-on-dark);
+  --color-info-on-dark: var(--tk-info-on-dark);
 
   /* === RAYONS === */
   --radius-sm: 6px;
@@ -83,9 +102,9 @@
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2);
   --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
   --shadow-xl: 0 24px 80px rgba(0, 0, 0, 0.6), 0 8px 24px rgba(0, 0, 0, 0.4);
-  --shadow-glow-gold: 0 0 40px rgba(255, 112, 0, 0.25);
-  --shadow-glow-blue: 0 0 40px rgba(46, 134, 193, 0.2);
-  --shadow-glow-green: 0 0 40px rgba(45, 155, 90, 0.2);
+  --shadow-glow-gold: 0 0 40px var(--tk-brand-glow);
+  --shadow-glow-blue: 0 0 40px var(--tk-caisse-glow);
+  --shadow-glow-green: 0 0 40px var(--tk-haccp-glow);
 
   /* === SHADCN aliases (pour les primitives déjà installées) === */
   --background: var(--color-bg-base);
@@ -95,7 +114,7 @@
   --popover: var(--color-bg-elevated);
   --popover-foreground: var(--color-text-primary);
   --primary: var(--gold-light);
-  --primary-foreground: var(--color-bg-base);
+  --primary-foreground: var(--on-gold);
   --secondary: var(--color-bg-surface);
   --secondary-foreground: var(--color-text-primary);
   --muted: var(--color-bg-surface);
@@ -154,6 +173,18 @@
   --color-gold-light: var(--gold-light);
   --color-gold-mid: var(--gold-mid);
   --color-gold-pale: var(--gold-pale);
+  --color-gold-border: var(--gold-border);
+  --color-on-gold: var(--on-gold);
+
+  /* Statuts */
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-error: var(--color-error);
+  --color-info: var(--color-info);
+  --color-success-on-dark: var(--color-success-on-dark);
+  --color-warning-on-dark: var(--color-warning-on-dark);
+  --color-error-on-dark: var(--color-error-on-dark);
+  --color-info-on-dark: var(--color-info-on-dark);
 
   /* shadcn */
   --color-background: var(--background);
@@ -177,10 +208,8 @@
   --color-ring: var(--ring);
 
   --font-sans: var(--font-poppins, system-ui, sans-serif);
-  --font-display: var(--font-fraunces, Georgia, serif);
-  --font-condensed: var(--font-anton, "Arial Narrow", sans-serif);
-  --font-handwritten: var(--font-caveat, cursive);
-  --font-mono: var(--font-geist-mono, ui-monospace, monospace);
+  --font-display: var(--font-archivo, system-ui, sans-serif);
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
   --radius-sm: var(--radius-sm);
   --radius-md: var(--radius-md);
@@ -208,10 +237,10 @@
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(255, 112, 0, 0.5);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--tk-brand) 50%, transparent);
   }
   50% {
-    box-shadow: 0 0 0 12px rgba(255, 112, 0, 0);
+    box-shadow: 0 0 0 12px transparent;
   }
 }
 
@@ -230,21 +259,33 @@ body {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='200' height='200' filter='url(%23n)' opacity='0.5'/></svg>");
 }
 
-/* Ardoise: dégradé radial sombre simulant la pierre (RAL 5004) */
+/* Fond nuit du <body> — même valeur que les pages, pour qu'aucun raccord
+   n'apparaisse au rebond de scroll ni derrière la barre d'adresse mobile. */
 .ardoise-bg {
   background-color: var(--color-bg-base);
   background-image:
-    radial-gradient(ellipse at 70% 30%, rgba(46, 134, 193, 0.08), transparent 60%),
-    radial-gradient(ellipse at 20% 80%, rgba(255, 112, 0, 0.06), transparent 50%),
-    linear-gradient(160deg, #2A2A3D 0%, #1F1F2D 60%, #15151E 100%);
+    radial-gradient(ellipse at 70% 30%, color-mix(in srgb, var(--tk-caisse-accent) 6%, transparent), transparent 60%),
+    radial-gradient(ellipse at 20% 80%, color-mix(in srgb, var(--tk-brand) 5%, transparent), transparent 50%),
+    linear-gradient(160deg, var(--tk-night-surface) 0%, var(--tk-night) 60%, var(--tk-night-deep) 100%);
 }
 
-/* Texture pierre claire pour sections lumineuses */
+/* Texture papier pour sections lumineuses */
 .pierre-claire-bg {
   background-color: var(--color-bg-light);
   background-image:
-    radial-gradient(circle at 30% 40%, rgba(184, 144, 26, 0.04), transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(26, 82, 118, 0.03), transparent 50%);
+    radial-gradient(circle at 30% 40%, color-mix(in srgb, var(--tk-brand) 4%, transparent), transparent 50%),
+    radial-gradient(circle at 80% 70%, color-mix(in srgb, var(--tk-on-paper-text) 3%, transparent), transparent 50%);
+}
+
+/* Halo de module : la couleur d'une page module arrive par-dessus le fond nuit,
+   jamais par le fond lui-même. Poser --module-glow sur la section. */
+.module-glow {
+  background-color: var(--color-bg-base);
+  background-image: radial-gradient(
+    circle at 82% 12%,
+    var(--module-glow, transparent),
+    transparent 58%
+  );
 }
 
 /* Stagger animations */

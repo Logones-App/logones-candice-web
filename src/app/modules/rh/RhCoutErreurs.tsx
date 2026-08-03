@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import Link from "next/link";
 import { Scale, ArrowRight } from "lucide-react";
 import { RH as C } from "./palette";
@@ -40,13 +41,13 @@ export function RhCoutErreurs() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(16px, 2vw, 28px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.tight,
+        paddingInline: gutter,
       }}
     >
       <div
         className="mx-auto"
-        style={{ maxWidth: "1280px", marginTop: "-20px" }}
+        style={{ maxWidth: container, marginTop: "-20px" }}
       >
         <div
           className="grid gap-7 lg:grid-cols-[26fr_54fr_20fr] lg:gap-7"
@@ -63,9 +64,9 @@ export function RhCoutErreurs() {
           <div>
             <h2
               style={{
-                fontSize: "clamp(26px, 3.2vw, 36px)",
-                lineHeight: 1.1,
-                fontWeight: 850,
+                fontSize: "clamp(24px, 3vw, 32px)",
+                lineHeight: 1.15,
+                fontWeight: 900,
                 color: C.text,
                 marginBottom: "16px",
               }}
@@ -90,7 +91,7 @@ export function RhCoutErreurs() {
               href="#features"
               className="inline-flex items-center gap-1.5"
               style={{
-                fontSize: "13.5px",
+                fontSize: "14px",
                 fontWeight: 800,
                 color: C.violet,
               }}
@@ -117,7 +118,7 @@ export function RhCoutErreurs() {
                 fontWeight: 800,
                 color: C.textMuted,
                 textTransform: "uppercase",
-                letterSpacing: "0.08em",
+                letterSpacing: "0.06em",
                 padding: "12px 14px",
                 borderBottom: `1px solid ${C.borderSoft}`,
               }}
@@ -136,7 +137,7 @@ export function RhCoutErreurs() {
                   style={{
                     gridTemplateColumns:
                       "minmax(0,1.5fr) minmax(0,1.5fr) minmax(0,0.7fr) minmax(0,1fr)",
-                    fontSize: "12.5px",
+                    fontSize: "13px",
                     padding: "12px 14px",
                     borderBottom:
                       i === risks.length - 1
@@ -204,7 +205,7 @@ export function RhCoutErreurs() {
             <p
               style={{
                 fontSize: "15px",
-                lineHeight: 1.55,
+                lineHeight: 1.6,
                 color: C.text,
                 fontWeight: 600,
               }}

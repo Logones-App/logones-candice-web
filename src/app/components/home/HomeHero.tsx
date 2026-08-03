@@ -2,10 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Check, ShieldCheck, Rocket, CalendarDays } from "lucide-react";
 
-/* Charte hero (spec landing LOGONES) */
-const NAVY = "#07111F";
-const ORANGE = "#FF5A1F";
-const TEXT_SEC = "#D6DCE8";
+import { brand, ground, onNight } from "../../lib/tokens";
+import { container, gutter } from "../../lib/spacing";
+
+/* Charte hero — toutes les valeurs viennent des tokens */
+const NAVY = ground.night;
+const ORANGE = brand.orange;
+const TEXT_SEC = onNight.subtle;
 const LINE = "rgba(255,255,255,0.16)";
 
 const benefits = [
@@ -57,7 +60,7 @@ export function HomeHero() {
         className="absolute inset-0 -z-10 hidden lg:block"
         style={{
           background:
-            "linear-gradient(90deg, #07111F 0%, rgba(7,17,31,0.85) 18%, rgba(7,17,31,0.15) 55%, rgba(7,17,31,0) 100%)",
+            "linear-gradient(90deg, #02060B 0%, rgba(2,6,11,0.85) 18%, rgba(2,6,11,0.15) 55%, rgba(2,6,11,0) 100%)",
         }}
         aria-hidden
       />
@@ -71,7 +74,12 @@ export function HomeHero() {
         aria-hidden
       />
 
-      <div className="px-5 pt-[110px] sm:px-8 lg:px-16 xl:px-24">
+      {/* Même conteneur que la barre de navigation et que tous les autres
+          héros : sans ça, le titre d'accueil démarrait à gauche du logo. */}
+      <div
+        className="mx-auto"
+        style={{ maxWidth: container, paddingInline: gutter, paddingTop: "110px" }}
+      >
         <div className="flex min-h-[480px] flex-col justify-center lg:min-h-[600px]">
           {/* ---------- COLONNE UNIQUE : texte ---------- */}
           <div className="py-8 lg:py-14">
@@ -82,13 +90,13 @@ export function HomeHero() {
               Le logiciel de caisse NF525
             </p>
 
-            <h1 className="mt-5 font-sans text-[clamp(42px,5.6vw,72px)] font-extrabold leading-[1.0] tracking-[-0.02em] text-white">
+            <h1 className="mt-5 font-sans text-[clamp(40px,6vw,68px)] font-extrabold leading-[1.0] tracking-[-0.02em] text-white">
               Tout votre restaurant.
               <br />
               <span style={{ color: ORANGE }}>Une seule</span> plateforme.
             </h1>
 
-            <p className="mt-6 text-[clamp(17px,1.6vw,22px)] font-medium leading-[1.5] text-white">
+            <p className="mt-6 text-[clamp(20px,2.4vw,26px)] font-medium leading-[1.5] text-white">
               Caisse NF525, réservations, stocks, HACCP et planning RH.
               Nativement intégrés dans Logones.
             </p>
@@ -117,9 +125,10 @@ export function HomeHero() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:gap-4">
               <Link
                 href="/demo"
-                className="inline-flex items-center justify-center gap-2 font-bold text-white transition-all hover:-translate-y-0.5 hover:brightness-110"
+                className="inline-flex items-center justify-center gap-2 font-bold transition-all hover:-translate-y-0.5 hover:brightness-110"
                 style={{
                   backgroundColor: ORANGE,
+                  color: brand.onOrange,
                   borderRadius: "10px",
                   padding: "18px 30px",
                 }}

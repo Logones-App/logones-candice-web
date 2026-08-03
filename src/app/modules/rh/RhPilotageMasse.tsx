@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import { Check, AlertTriangle } from "lucide-react";
 import { RH as C } from "./palette";
 
@@ -6,14 +7,14 @@ export function RhPilotageMasse() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(28px, 4vw, 48px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.compact,
+        paddingInline: gutter,
       }}
     >
       <div
         className="mx-auto grid items-start gap-8 lg:grid-cols-[25fr_75fr] lg:gap-10"
         style={{
-          maxWidth: "1280px",
+          maxWidth: container,
           background: "rgba(7,21,35,0.78)",
           border: `1px solid ${C.border}`,
           borderRadius: "24px",
@@ -26,9 +27,9 @@ export function RhPilotageMasse() {
         <div>
           <h2
             style={{
-              fontSize: "clamp(28px, 3.6vw, 40px)",
-              lineHeight: 1.1,
-              fontWeight: 850,
+              fontSize: "clamp(28px, 3.8vw, 42px)",
+              lineHeight: 1.15,
+              fontWeight: 900,
               color: C.text,
               marginBottom: "18px",
             }}
@@ -39,8 +40,8 @@ export function RhPilotageMasse() {
           </h2>
           <p
             style={{
-              fontSize: "16px",
-              lineHeight: 1.65,
+              fontSize: "15px",
+              lineHeight: 1.6,
               color: C.textSubtle,
               marginBottom: "24px",
             }}
@@ -62,7 +63,7 @@ export function RhPilotageMasse() {
                 className="flex items-center"
                 style={{
                   gap: "10px",
-                  fontSize: "14.5px",
+                  fontSize: "15px",
                   fontWeight: 600,
                   color: "rgba(255,255,255,0.82)",
                 }}
@@ -153,9 +154,9 @@ function KpiCard({
       <p
         style={{
           fontSize: "22px",
-          fontWeight: 850,
+          fontWeight: 900,
           color: C.text,
-          lineHeight: 1,
+          lineHeight: 1.05,
           marginTop: "6px",
           fontVariantNumeric: "tabular-nums",
         }}
@@ -164,7 +165,7 @@ function KpiCard({
       </p>
       <p
         style={{
-          fontSize: "10.5px",
+          fontSize: "11px",
           color: trendUp ? C.green : C.textSubtle,
           fontWeight: 700,
           marginTop: "4px",
@@ -242,7 +243,7 @@ function DonutServices() {
             <li
               key={s.label}
               className="flex items-center justify-between"
-              style={{ fontSize: "10.5px" }}
+              style={{ fontSize: "11px" }}
             >
               <span className="flex items-center gap-1.5">
                 <span
@@ -383,7 +384,7 @@ function AlertesEnCours() {
         <AlertTriangle size={13} style={{ color: C.violet }} strokeWidth={2} />
         <p
           style={{
-            fontSize: "10.5px",
+            fontSize: "11px",
             fontWeight: 800,
             color: C.text,
             textTransform: "uppercase",
@@ -415,7 +416,7 @@ function AlertesEnCours() {
               }}
             />
             <div className="flex-1 min-w-0">
-              <p style={{ color: C.text, fontWeight: 700, lineHeight: 1.2 }}>
+              <p style={{ color: C.text, fontWeight: 700, lineHeight: 1.25 }}>
                 {a.label}
               </p>
               <p style={{ color: C.textMuted, fontSize: "10px", marginTop: "1px" }}>

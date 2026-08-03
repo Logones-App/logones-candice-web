@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../lib/spacing";
 import { ABOUT as C } from "./palette";
 import { ABOUT_PHOTOS } from "./photos";
 import { AboutPhoto } from "./AboutPhoto";
@@ -35,18 +36,18 @@ export function AboutTeam() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(48px, 6vw, 80px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div style={{ marginBottom: "40px" }}>
           <p
             style={{
-              color: C.orange,
+              color: C.orangeOnPaper,
               fontSize: "12px",
               fontWeight: 800,
-              letterSpacing: "0.18em",
+              letterSpacing: "0.14em",
               textTransform: "uppercase",
               marginBottom: "14px",
             }}
@@ -55,14 +56,14 @@ export function AboutTeam() {
           </p>
           <h2
             style={{
-              fontSize: "clamp(28px, 3.6vw, 42px)",
-              lineHeight: 1.1,
-              fontWeight: 850,
+              fontSize: "clamp(28px, 3.8vw, 42px)",
+              lineHeight: 1.15,
+              fontWeight: 900,
               color: C.text,
             }}
           >
             Deux co-fondateurs.{" "}
-            <span style={{ color: C.orange }}>Deux métiers.</span>
+            <span style={{ color: C.orangeOnPaper }}>Deux métiers.</span>
           </h2>
         </div>
 
@@ -116,20 +117,20 @@ export function AboutTeam() {
                   <p
                     style={{
                       fontSize: "24px",
-                      fontWeight: 850,
+                      fontWeight: 900,
                       color: C.text,
-                      lineHeight: 1.1,
+                      lineHeight: 1.15,
                     }}
                   >
                     {m.name}
                   </p>
                   <p
                     style={{
-                      fontSize: "13.5px",
+                      fontSize: "14px",
                       fontWeight: 700,
-                      color: C.orange,
+                      color: C.orangeOnPaper,
                       marginTop: "5px",
-                      lineHeight: 1.35,
+                      lineHeight: 1.25,
                     }}
                   >
                     {m.role}
@@ -143,7 +144,7 @@ export function AboutTeam() {
                     key={j}
                     style={{
                       fontSize: "15px",
-                      lineHeight: 1.65,
+                      lineHeight: 1.6,
                       color: C.textSubtle,
                     }}
                   >

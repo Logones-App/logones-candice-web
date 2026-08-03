@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -32,7 +33,7 @@ export function HaccpHero() {
       style={{
         backgroundColor: C.bg,
         minHeight: "720px",
-        paddingBlock: "120px clamp(56px, 6vw, 80px)",
+        paddingBlock: rhythm.hero,
       }}
     >
       {/* Background image — chef en cuisine pro (scale up to fill larger area) */}
@@ -58,7 +59,7 @@ export function HaccpHero() {
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "linear-gradient(90deg, #020B08 0%, rgba(2,11,8,0.92) 38%, rgba(2,11,8,0.55) 65%, rgba(2,11,8,0.20) 100%)",
+            "linear-gradient(90deg, #02060B 0%, rgba(2,6,11,0.92) 38%, rgba(2,6,11,0.55) 65%, rgba(2,6,11,0.20) 100%)",
         }}
         aria-hidden
       />
@@ -92,8 +93,8 @@ export function HaccpHero() {
       <div
         className="relative mx-auto"
         style={{
-          maxWidth: "1280px",
-          paddingInline: "clamp(20px, 3vw, 40px)",
+          maxWidth: container,
+          paddingInline: gutter,
         }}
       >
         <div className="max-w-[680px]">
@@ -118,9 +119,9 @@ export function HaccpHero() {
 
             <h1
               style={{
-                fontSize: "clamp(42px, 6vw, 68px)",
-                lineHeight: 0.98,
-                fontWeight: 850,
+                fontSize: "clamp(40px, 6vw, 68px)",
+                lineHeight: 1.05,
+                fontWeight: 900,
                 color: C.text,
                 letterSpacing: "-0.02em",
                 marginBottom: "22px",
@@ -136,7 +137,7 @@ export function HaccpHero() {
 
             <p
               style={{
-                fontSize: "18px",
+                fontSize: "17px",
                 lineHeight: 1.6,
                 color: C.textSubtle,
                 maxWidth: "620px",
@@ -175,7 +176,7 @@ export function HaccpHero() {
                   </span>
                   <span
                     style={{
-                      fontSize: "13.5px",
+                      fontSize: "14px",
                       fontWeight: 600,
                       color: "rgba(255,255,255,0.84)",
                     }}
@@ -190,11 +191,12 @@ export function HaccpHero() {
             <div className="flex flex-wrap gap-3" style={{ marginBottom: "26px" }}>
               <Link
                 href="/demo"
-                className="inline-flex items-center justify-center gap-2 rounded-full text-white transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 rounded-full transition-all hover:-translate-y-0.5"
                 style={{
                   height: "54px",
                   padding: "0 28px",
-                  background: `linear-gradient(135deg, ${C.green}, ${C.greenDeep})`,
+                  background: `linear-gradient(135deg, ${C.buttonFrom}, ${C.buttonTo})`,
+                  color: C.onButton,
                   fontSize: "15px",
                   fontWeight: 800,
                   boxShadow:
@@ -225,7 +227,7 @@ export function HaccpHero() {
             {/* Reassurance row */}
             <ul
               className="flex flex-wrap gap-x-5 gap-y-2"
-              style={{ fontSize: "12.5px", color: C.textMuted }}
+              style={{ fontSize: "13px", color: C.textMuted }}
             >
               {reassurance.map((r) => (
                 <li key={r} className="inline-flex items-center gap-1.5">

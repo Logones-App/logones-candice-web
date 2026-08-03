@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../lib/spacing";
 import { TARIFS as C } from "./palette";
 import {
   Accordion,
@@ -46,11 +47,11 @@ export function TarifsFAQ() {
     <section
       style={{
         backgroundColor: C.bgDark,
-        paddingBlock: "clamp(56px, 6vw, 80px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
           <div>
             <p
@@ -67,9 +68,9 @@ export function TarifsFAQ() {
             </p>
             <h2
               style={{
-                fontSize: "clamp(28px, 3.6vw, 40px)",
-                lineHeight: 1.1,
-                fontWeight: 850,
+                fontSize: "clamp(28px, 3.8vw, 42px)",
+                lineHeight: 1.15,
+                fontWeight: 900,
                 color: C.textOnDark,
                 marginBottom: "16px",
               }}
@@ -111,7 +112,7 @@ export function TarifsFAQ() {
                 <AccordionContent
                   style={{
                     fontSize: "14px",
-                    lineHeight: 1.65,
+                    lineHeight: 1.6,
                     color: C.textOnDarkSubtle,
                   }}
                 >

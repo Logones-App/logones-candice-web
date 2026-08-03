@@ -1,14 +1,8 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import Image from "next/image";
 import { Check } from "lucide-react";
 
-const C = {
-  bg: "#02060B",
-  blue: "#147CFF",
-  text: "#FFFFFF",
-  textSubtle: "rgba(255,255,255,0.68)",
-  textBright: "rgba(255,255,255,0.82)",
-  border: "rgba(20,124,255,0.18)",
-};
+import { CAISSE as C } from "./palette";
 
 const features = [
   "Terminaux tactiles performants",
@@ -25,11 +19,11 @@ export function CaisseHardwareSection() {
       aria-labelledby="hardware-title"
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(32px, 4vw, 48px)",
-        paddingInline: "clamp(20px, 3vw, 32px)",
+        paddingBlock: rhythm.compact,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div
           className="relative grid gap-10 overflow-hidden lg:grid-cols-[38%_62%] lg:gap-12"
           style={{
@@ -72,10 +66,10 @@ export function CaisseHardwareSection() {
               id="hardware-title"
               style={{
                 color: C.text,
-                fontSize: "clamp(28px, 4vw, 42px)",
-                lineHeight: 1.08,
-                fontWeight: 850,
-                letterSpacing: "-0.03em",
+                fontSize: "clamp(28px, 3.8vw, 42px)",
+                lineHeight: 1.15,
+                fontWeight: 900,
+                letterSpacing: "-0.02em",
                 marginBottom: "24px",
               }}
             >
@@ -85,8 +79,8 @@ export function CaisseHardwareSection() {
             <p
               style={{
                 color: C.textSubtle,
-                fontSize: "16px",
-                lineHeight: 1.65,
+                fontSize: "15px",
+                lineHeight: 1.6,
                 maxWidth: "440px",
                 marginBottom: "28px",
               }}
@@ -104,7 +98,7 @@ export function CaisseHardwareSection() {
                   style={{
                     gap: "12px",
                     fontSize: "15px",
-                    fontWeight: 650,
+                    fontWeight: 700,
                     color: C.textBright,
                   }}
                 >

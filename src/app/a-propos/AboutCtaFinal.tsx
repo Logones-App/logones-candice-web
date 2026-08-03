@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../lib/spacing";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ABOUT as C } from "./palette";
@@ -9,11 +10,11 @@ export function AboutCtaFinal() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(48px, 6vw, 88px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div
           className="grid items-stretch gap-0 overflow-hidden lg:grid-cols-[1.2fr_0.8fr]"
           style={{
@@ -27,10 +28,10 @@ export function AboutCtaFinal() {
           <div style={{ padding: "clamp(36px, 4.5vw, 60px)" }}>
             <p
               style={{
-                color: C.orange,
+                color: C.orangeOnPaper,
                 fontSize: "12px",
                 fontWeight: 800,
-                letterSpacing: "0.18em",
+                letterSpacing: "0.14em",
                 textTransform: "uppercase",
                 marginBottom: "16px",
               }}
@@ -39,24 +40,24 @@ export function AboutCtaFinal() {
             </p>
             <h2
               style={{
-                fontSize: "clamp(26px, 3.2vw, 38px)",
-                lineHeight: 1.12,
-                fontWeight: 850,
+                fontSize: "clamp(28px, 3.8vw, 42px)",
+                lineHeight: 1.15,
+                fontWeight: 900,
                 color: C.text,
                 marginBottom: "18px",
-                letterSpacing: "-0.01em",
+                letterSpacing: "-0.02em",
               }}
             >
               Et si demain, votre restaurant fonctionnait{" "}
-              <span style={{ color: C.orange, fontStyle: "italic" }}>
+              <span style={{ color: C.orangeOnPaper, fontStyle: "italic" }}>
                 pour vous
               </span>{" "}
               — pas l&apos;inverse ?
             </h2>
             <p
               style={{
-                fontSize: "16px",
-                lineHeight: 1.65,
+                fontSize: "15px",
+                lineHeight: 1.6,
                 color: C.textSubtle,
                 maxWidth: "560px",
                 marginBottom: "30px",
@@ -70,15 +71,16 @@ export function AboutCtaFinal() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/demo"
-                className="inline-flex items-center justify-center gap-2 rounded-full text-white transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 rounded-full transition-all hover:-translate-y-0.5"
                 style={{
                   height: "52px",
                   padding: "0 26px",
                   background: `linear-gradient(135deg, ${C.orange}, ${C.orangeDeep})`,
+                  color: "#1A0A00",
                   fontSize: "15px",
                   fontWeight: 800,
                   boxShadow:
-                    "0 14px 32px rgba(255,106,42,0.32), inset 0 1px 0 rgba(255,255,255,0.28)",
+                    "0 14px 32px rgba(226,104,24,0.32), inset 0 1px 0 rgba(255,255,255,0.28)",
                 }}
               >
                 Demander une démo

@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import { Wifi } from "lucide-react";
 import { RES as C } from "./palette";
 
@@ -21,11 +22,11 @@ export function ReservationEmpreinte() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(20px, 3vw, 40px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.compact,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div
           className="relative overflow-hidden rounded-3xl"
           style={{
@@ -56,9 +57,9 @@ export function ReservationEmpreinte() {
               </p>
               <h2
                 style={{
-                  fontSize: "clamp(28px, 4vw, 42px)",
-                  lineHeight: 1.08,
-                  fontWeight: 850,
+                  fontSize: "clamp(28px, 3.8vw, 42px)",
+                  lineHeight: 1.15,
+                  fontWeight: 900,
                   color: C.lightInk,
                   letterSpacing: "-0.02em",
                   marginBottom: "20px",
@@ -70,8 +71,8 @@ export function ReservationEmpreinte() {
               </h2>
               <p
                 style={{
-                  fontSize: "16px",
-                  lineHeight: 1.65,
+                  fontSize: "15px",
+                  lineHeight: 1.6,
                   color: C.lightInkSubtle,
                   marginBottom: "32px",
                   maxWidth: "540px",
@@ -96,8 +97,8 @@ export function ReservationEmpreinte() {
                       style={{
                         width: "32px",
                         height: "32px",
-                        backgroundColor: "rgba(224,32,32,0.10)",
-                        border: `1px solid rgba(224,32,32,0.28)`,
+                        backgroundColor: "rgba(209,67,67,0.10)",
+                        border: `1px solid rgba(209,67,67,0.28)`,
                         color: C.red,
                         fontSize: "13px",
                         fontWeight: 900,
@@ -112,7 +113,7 @@ export function ReservationEmpreinte() {
                           fontSize: "15px",
                           fontWeight: 800,
                           color: C.lightInk,
-                          lineHeight: 1.3,
+                          lineHeight: 1.25,
                         }}
                       >
                         {b.title}
@@ -201,7 +202,7 @@ function PosTerminalVisual() {
             height: "44%",
             borderRadius: "8px",
             background:
-              "linear-gradient(180deg, rgba(224,32,32,0.40), rgba(122,17,17,0.45))",
+              "linear-gradient(180deg, rgba(209,67,67,0.40), rgba(163,46,46,0.45))",
             border: "1px solid rgba(255,255,255,0.10)",
             boxShadow: "inset 0 1px 0 rgba(255,255,255,0.20)",
             display: "flex",
@@ -210,7 +211,7 @@ function PosTerminalVisual() {
             color: "#fff",
             fontSize: "14px",
             fontWeight: 800,
-            letterSpacing: "0.05em",
+            letterSpacing: "0.06em",
           }}
         >
           EMPREINTE
@@ -283,7 +284,7 @@ function PosTerminalVisual() {
             fontFamily: "var(--font-mono, monospace)",
             fontSize: "11px",
             color: "rgba(255,255,255,0.78)",
-            letterSpacing: "0.10em",
+            letterSpacing: "0.06em",
           }}
         >
           •••• •••• •••• 4242
@@ -340,7 +341,7 @@ function FivePercentBadge() {
         className="absolute -inset-4 rounded-full opacity-50 blur-2xl"
         style={{
           background:
-            "radial-gradient(circle, rgba(255,48,48,0.55), transparent 70%)",
+            "radial-gradient(circle, rgba(209,67,67,0.55), transparent 70%)",
         }}
       />
       {/* Main circle */}
@@ -351,7 +352,7 @@ function FivePercentBadge() {
             "radial-gradient(circle at 35% 30%, #FF3838 0%, #E02020 45%, #7A1111 100%)",
           border: "3px solid rgba(255,255,255,0.18)",
           boxShadow:
-            "0 0 40px rgba(224,32,32,0.55), inset 0 4px 0 rgba(255,255,255,0.18), inset 0 -8px 24px rgba(0,0,0,0.45)",
+            "0 0 40px rgba(209,67,67,0.55), inset 0 4px 0 rgba(255,255,255,0.18), inset 0 -8px 24px rgba(0,0,0,0.45)",
         }}
       >
         <p
@@ -359,8 +360,8 @@ function FivePercentBadge() {
             fontSize: "56px",
             fontWeight: 900,
             color: "#fff",
-            lineHeight: 1,
-            letterSpacing: "-0.04em",
+            lineHeight: 1.05,
+            letterSpacing: "-0.02em",
           }}
         >
           5 %
@@ -371,8 +372,8 @@ function FivePercentBadge() {
             fontSize: "9px",
             fontWeight: 900,
             color: "rgba(255,255,255,0.92)",
-            letterSpacing: "0.12em",
-            lineHeight: 1.3,
+            letterSpacing: "0.14em",
+            lineHeight: 1.25,
             paddingInline: "12px",
           }}
         >

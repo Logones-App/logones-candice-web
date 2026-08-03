@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import { ScanLine, FileText, PackageCheck, Check, Camera } from "lucide-react";
 import { STOCKS as C } from "./palette";
 
@@ -7,11 +8,11 @@ export function StocksScanBL() {
       id="features"
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(48px, 5vw, 72px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div className="text-center" style={{ marginBottom: "44px" }}>
           <p
             style={{
@@ -27,9 +28,9 @@ export function StocksScanBL() {
           </p>
           <h2
             style={{
-              fontSize: "clamp(28px, 4vw, 40px)",
-              lineHeight: 1.1,
-              fontWeight: 850,
+              fontSize: "clamp(28px, 3.8vw, 42px)",
+              lineHeight: 1.15,
+              fontWeight: 900,
               color: C.text,
               maxWidth: "820px",
               margin: "0 auto 14px",
@@ -41,7 +42,7 @@ export function StocksScanBL() {
           </h2>
           <p
             style={{
-              fontSize: "16px",
+              fontSize: "15px",
               lineHeight: 1.6,
               color: C.textSubtle,
               maxWidth: "680px",
@@ -139,8 +140,8 @@ function Step({
       </div>
       <h3
         style={{
-          fontSize: "16px",
-          fontWeight: 850,
+          fontSize: "15px",
+          fontWeight: 900,
           color: C.text,
           marginBottom: "8px",
           lineHeight: 1.25,
@@ -150,8 +151,8 @@ function Step({
       </h3>
       <p
         style={{
-          fontSize: "13.5px",
-          lineHeight: 1.55,
+          fontSize: "14px",
+          lineHeight: 1.6,
           color: C.textSubtle,
           marginBottom: visual ? "16px" : 0,
         }}
@@ -282,7 +283,7 @@ function StockVisual() {
           <li
             key={it.label}
             className="flex items-center justify-between"
-            style={{ fontSize: "10.5px" }}
+            style={{ fontSize: "11px" }}
           >
             <span style={{ color: C.text, fontWeight: 600 }}>{it.label}</span>
             <span

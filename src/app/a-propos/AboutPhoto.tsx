@@ -70,7 +70,7 @@ export function AboutPhoto({
         borderRadius: rounded,
         overflow: "hidden",
         background:
-          "repeating-linear-gradient(135deg, rgba(255,106,42,0.05) 0 14px, rgba(255,106,42,0.02) 14px 28px)",
+          "repeating-linear-gradient(135deg, rgba(226,104,24,0.05) 0 14px, rgba(226,104,24,0.02) 14px 28px)",
         border: `1px dashed ${C.orangeBorder}`,
         display: "flex",
         alignItems: "center",
@@ -100,8 +100,8 @@ export function AboutPhoto({
             style={{
               fontSize: "12px",
               fontWeight: 700,
-              color: C.orange,
-              letterSpacing: "0.04em",
+              color: C.orangeOnPaper,
+              letterSpacing: "0.06em",
             }}
           >
             {label}

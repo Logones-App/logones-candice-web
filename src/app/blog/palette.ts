@@ -1,19 +1,27 @@
+import { brand, ground, onNight, onPaper } from "../lib/tokens";
+
+/** Alias du blog vers les tokens. Aucune couleur propre ici. */
 export const BLOG = {
-  bg: "#F7F3EC",
-  bgDark: "#07111F",
-  bgDarkSecondary: "#0B1626",
-  card: "#FFFFFF",
-  orange: "#FF6A1A",
-  orangeDeep: "#E85800",
-  orangeSoft: "rgba(255,106,26,0.10)",
-  orangeBorder: "rgba(255,106,26,0.30)",
-  text: "#07111F",
-  textSubtle: "#5F6673",
-  textMuted: "rgba(7,17,31,0.50)",
-  textOnDark: "#FFFFFF",
-  textOnDarkSubtle: "rgba(255,255,255,0.74)",
-  textOnDarkMuted: "rgba(255,255,255,0.55)",
-  border: "rgba(7,17,31,0.10)",
-  borderSoft: "rgba(7,17,31,0.06)",
-  borderOnDark: "rgba(255,255,255,0.10)",
+  bg: ground.paper,
+  bgDark: ground.night,
+  bgDarkSecondary: ground.nightSurface,
+  card: ground.card,
+
+  orange: brand.orange,
+  orangeDeep: brand.orangeDeep,
+  /** Orange lisible sur papier ou carte blanche (5,01:1). brand.orange n'y passe pas (3,05:1). */
+  orangeOnPaper: brand.orangeDeep,
+  orangeSoft: brand.orangeSoft,
+  orangeBorder: brand.orangeBorder,
+
+  text: onPaper.text,
+  textSubtle: onPaper.subtle,
+  textMuted: onPaper.muted,
+  textOnDark: onNight.text,
+  textOnDarkSubtle: onNight.subtle,
+  textOnDarkMuted: onNight.muted,
+
+  border: onPaper.border,
+  borderSoft: onPaper.borderSoft,
+  borderOnDark: onNight.border,
 } as const;

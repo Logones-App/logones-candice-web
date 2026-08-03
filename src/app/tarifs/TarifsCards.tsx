@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../lib/spacing";
 import Link from "next/link";
 import { Check, ArrowRight } from "lucide-react";
 import { TARIFS as C } from "./palette";
@@ -94,16 +95,16 @@ export function TarifsCards() {
       id="cartes"
       style={{
         backgroundColor: C.card,
-        paddingBlock: "clamp(56px, 6vw, 80px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div className="grid gap-10 lg:grid-cols-[1fr_2.4fr] lg:gap-12" style={{ marginBottom: "44px" }}>
           <div>
             <p
               style={{
-                color: C.orange,
+                color: C.orangeOnPaper,
                 fontSize: "12px",
                 fontWeight: 900,
                 letterSpacing: "0.14em",
@@ -115,16 +116,16 @@ export function TarifsCards() {
             </p>
             <h2
               style={{
-                fontSize: "clamp(28px, 3.6vw, 42px)",
-                lineHeight: 1.08,
-                fontWeight: 850,
+                fontSize: "clamp(28px, 3.8vw, 42px)",
+                lineHeight: 1.15,
+                fontWeight: 900,
                 color: C.text,
                 marginBottom: "20px",
               }}
             >
               Des offres simples.
               <br />
-              <span style={{ color: C.orange }}>Sans addition cachée.</span>
+              <span style={{ color: C.orangeOnPaper }}>Sans addition cachée.</span>
             </h2>
           </div>
           <ul
@@ -135,7 +136,7 @@ export function TarifsCards() {
               <li
                 key={b}
                 className="flex items-center gap-2"
-                style={{ fontSize: "14.5px", fontWeight: 600, color: C.text }}
+                style={{ fontSize: "15px", fontWeight: 600, color: C.text }}
               >
                 <span
                   className="flex items-center justify-center rounded-full"
@@ -144,7 +145,7 @@ export function TarifsCards() {
                     height: "22px",
                     background: C.orangeSoft,
                     border: `1px solid ${C.orangeBorder}`,
-                    color: C.orange,
+                    color: C.orangeOnPaper,
                     flexShrink: 0,
                   }}
                   aria-hidden
@@ -194,7 +195,7 @@ function PlanCard({ plan }: { plan: Plan }) {
         borderRadius: "20px",
         padding: "28px 24px",
         boxShadow: isPremium
-          ? "0 24px 60px rgba(255,106,26,0.18), inset 0 1px 0 rgba(255,255,255,0.5)"
+          ? "0 24px 60px rgba(226,104,24,0.18), inset 0 1px 0 rgba(255,255,255,0.5)"
           : "0 10px 30px rgba(7,17,31,0.06)",
       }}
     >
@@ -204,9 +205,9 @@ function PlanCard({ plan }: { plan: Plan }) {
           style={{
             top: "-12px",
             left: "24px",
-            fontSize: "10.5px",
+            fontSize: "11px",
             fontWeight: 900,
-            letterSpacing: "0.12em",
+            letterSpacing: "0.14em",
             textTransform: "uppercase",
             padding: "4px 12px",
             background: isPremium ? C.orange : C.bgDark,
@@ -223,7 +224,7 @@ function PlanCard({ plan }: { plan: Plan }) {
           fontSize: "13px",
           fontWeight: 800,
           color: C.text,
-          letterSpacing: "0.08em",
+          letterSpacing: "0.06em",
           textTransform: "uppercase",
           marginTop: plan.badge ? "8px" : 0,
           marginBottom: "14px",
@@ -236,9 +237,9 @@ function PlanCard({ plan }: { plan: Plan }) {
         <span
           style={{
             fontSize: "36px",
-            fontWeight: 850,
+            fontWeight: 900,
             color: C.text,
-            lineHeight: 1,
+            lineHeight: 1.05,
             letterSpacing: "-0.02em",
           }}
         >
@@ -275,7 +276,7 @@ function PlanCard({ plan }: { plan: Plan }) {
             key={f}
             className="flex items-start gap-2.5"
             style={{
-              fontSize: "13.5px",
+              fontSize: "14px",
               color: C.text,
               lineHeight: 1.45,
               fontWeight: 500,
@@ -288,7 +289,7 @@ function PlanCard({ plan }: { plan: Plan }) {
                 height: "18px",
                 background: C.orangeSoft,
                 border: `1px solid ${C.orangeBorder}`,
-                color: C.orange,
+                color: C.orangeOnPaper,
                 marginTop: "2px",
               }}
               aria-hidden
@@ -313,7 +314,7 @@ function PlanCard({ plan }: { plan: Plan }) {
                 background: `linear-gradient(135deg, ${C.orange}, ${C.orangeDeep})`,
                 color: "#FFFFFF",
                 boxShadow:
-                  "0 12px 28px rgba(255,106,26,0.32), inset 0 1px 0 rgba(255,255,255,0.28)",
+                  "0 12px 28px rgba(226,104,24,0.32), inset 0 1px 0 rgba(255,255,255,0.28)",
                 border: "1px solid rgba(255,255,255,0.10)",
               }
             : {

@@ -57,7 +57,7 @@ export default async function MerciPage({
           className="mx-auto h-14 w-14 text-haccp-accent"
           aria-hidden
         />
-        <h1 className="mt-8 font-sans text-[clamp(32px,4vw,48px)] font-semibold leading-[1.15] text-text-primary">
+        <h1 className="mt-8 font-sans text-[clamp(28px,3.8vw,42px)] font-semibold leading-[1.15] text-text-primary">
           Votre créneau est confirmé.
         </h1>
 
@@ -102,7 +102,7 @@ export default async function MerciPage({
           </div>
         )}
 
-        <p className="mx-auto mt-8 max-w-md text-[clamp(15px,1.5vw,17px)] leading-[1.65] text-text-secondary">
+        <p className="mx-auto mt-8 max-w-md text-[clamp(16px,1.5vw,19px)] leading-[1.65] text-text-secondary">
           Vous recevez une confirmation par email avec le lien visio. Si
           quelque chose change, on s&apos;adapte — répondez simplement au mail.
         </p>

@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../../lib/spacing";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import { ShieldCheck, ReceiptText, CreditCard, WifiOff } from "lucide-react";
@@ -45,11 +46,11 @@ export function CaisseReassuranceBar() {
     <section
       style={{
         backgroundColor: PALETTE.bg,
-        paddingBlock: "32px",
-        paddingInline: "clamp(18px, 4vw, 48px)",
+        paddingBlock: rhythm.tight,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         {/* CTA group */}
         <div
           className="flex flex-col sm:flex-row sm:items-center"
@@ -168,7 +169,7 @@ function ReassuranceCard({
         <p
           style={{
             fontSize: "14px",
-            fontWeight: 850,
+            fontWeight: 900,
             color: PALETTE.text,
             lineHeight: 1.15,
             marginBottom: "4px",
@@ -182,7 +183,7 @@ function ReassuranceCard({
             fontSize: "12px",
             fontWeight: 500,
             color: PALETTE.textSubtle,
-            lineHeight: 1.2,
+            lineHeight: 1.25,
             fontFamily: "var(--font-poppins), sans-serif",
           }}
         >

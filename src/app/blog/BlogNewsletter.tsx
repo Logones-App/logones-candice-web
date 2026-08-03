@@ -1,5 +1,6 @@
 "use client";
 
+import { container, gutter, rhythm } from "../lib/spacing";
 import { useState } from "react";
 import { ArrowRight, Check } from "lucide-react";
 import { BLOG as C } from "./palette";
@@ -18,11 +19,11 @@ export function BlogNewsletter() {
       id="newsletter"
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(40px, 5vw, 72px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div
           className="relative overflow-hidden flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between"
           style={{
@@ -41,7 +42,7 @@ export function BlogNewsletter() {
               width: "380px",
               height: "280px",
               background:
-                "radial-gradient(ellipse, rgba(255,106,26,0.16), transparent 65%)",
+                "radial-gradient(ellipse, rgba(226,104,24,0.16), transparent 65%)",
               filter: "blur(20px)",
             }}
             aria-hidden
@@ -51,9 +52,9 @@ export function BlogNewsletter() {
           <div className="relative" style={{ maxWidth: "520px" }}>
             <h2
               style={{
-                fontSize: "clamp(24px, 3vw, 34px)",
-                lineHeight: 1.12,
-                fontWeight: 850,
+                fontSize: "clamp(24px, 3vw, 32px)",
+                lineHeight: 1.15,
+                fontWeight: 900,
                 color: C.textOnDark,
                 marginBottom: "12px",
               }}
@@ -136,15 +137,16 @@ export function BlogNewsletter() {
                 />
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 rounded-full text-white transition-all hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-2 rounded-full transition-all hover:-translate-y-0.5"
                   style={{
                     height: "52px",
                     padding: "0 24px",
                     background: `linear-gradient(135deg, ${C.orange}, ${C.orangeDeep})`,
+                    color: "#1A0A00",
                     fontSize: "15px",
                     fontWeight: 800,
                     boxShadow:
-                      "0 12px 28px rgba(255,106,26,0.35), inset 0 1px 0 rgba(255,255,255,0.28)",
+                      "0 12px 28px rgba(226,104,24,0.35), inset 0 1px 0 rgba(255,255,255,0.28)",
                     whiteSpace: "nowrap",
                   }}
                 >

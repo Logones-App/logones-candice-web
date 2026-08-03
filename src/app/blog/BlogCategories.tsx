@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../lib/spacing";
 import Link from "next/link";
 import {
   TrendingUp,
@@ -33,16 +34,16 @@ export function BlogCategories() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(48px, 6vw, 72px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <h2
           style={{
-            fontSize: "clamp(24px, 3vw, 34px)",
-            lineHeight: 1.1,
-            fontWeight: 850,
+            fontSize: "clamp(24px, 3vw, 32px)",
+            lineHeight: 1.15,
+            fontWeight: 900,
             color: C.text,
             marginBottom: "28px",
           }}
@@ -54,7 +55,7 @@ export function BlogCategories() {
           {categories.map((cat) => {
             const hasArticles = themesWithArticles.has(cat.theme);
             const cardClass =
-              "group flex flex-col items-center gap-2.5 rounded-lg border border-[rgba(7,17,31,0.10)] text-center transition-colors hover:border-[#FF6A1A]";
+              "group flex flex-col items-center gap-2.5 rounded-lg border border-[rgba(7,17,31,0.10)] text-center transition-colors hover:border-[color:var(--gold-light)]";
             const cardStyle = {
               background: C.card,
               borderRadius: "8px",
@@ -69,7 +70,7 @@ export function BlogCategories() {
                     width: "40px",
                     height: "40px",
                     background: C.orangeSoft,
-                    color: C.orange,
+                    color: C.orangeOnPaper,
                   }}
                   aria-hidden
                 >
@@ -77,7 +78,7 @@ export function BlogCategories() {
                 </span>
                 <span
                   style={{
-                    fontSize: "12.5px",
+                    fontSize: "13px",
                     fontWeight: 600,
                     color: C.text,
                     lineHeight: 1.25,

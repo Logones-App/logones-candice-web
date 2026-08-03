@@ -1,3 +1,4 @@
+import { container, gutter } from "../lib/spacing";
 import { ABOUT as C } from "./palette";
 
 const steps = [
@@ -25,10 +26,10 @@ export function AboutTimeline() {
       style={{
         backgroundColor: C.bg,
         paddingBottom: "clamp(48px, 6vw, 80px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <div
           className="relative"
           style={{
@@ -70,17 +71,17 @@ export function AboutTimeline() {
                 <p
                   style={{
                     fontSize: "20px",
-                    fontWeight: 850,
+                    fontWeight: 900,
                     color: C.text,
                     marginBottom: "10px",
-                    letterSpacing: "-0.01em",
+                    letterSpacing: "-0.02em",
                   }}
                 >
                   {s.year}
                 </p>
                 <p
                   style={{
-                    fontSize: "14.5px",
+                    fontSize: "15px",
                     lineHeight: 1.6,
                     color: C.textSubtle,
                   }}

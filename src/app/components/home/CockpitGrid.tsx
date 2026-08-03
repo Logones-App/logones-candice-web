@@ -14,20 +14,22 @@ import {
   Clock,
 } from "lucide-react";
 
+import { brand, ground, onNight, status, tint } from "../../lib/tokens";
+
 const PALETTE = {
-  bg: "#020B12",
+  bg: ground.night,
   cardGradFrom: "#0D1A22",
   cardGradTo: "#08131A",
-  widgetBg: "#081019",
-  border: "rgba(255,255,255,0.06)",
-  borderHover: "rgba(255,112,0,0.35)",
-  text: "#F6F3EA",
-  textTitle: "#F8F4EA",
-  textDesc: "rgba(255,255,255,0.72)",
-  textMuted: "rgba(255,255,255,0.50)",
-  iconOrange: "#FF7000",
-  accentOrange: "#FF7000",
-  green: "#2D9B5A",
+  widgetBg: ground.nightSurface,
+  border: onNight.borderSoft,
+  borderHover: tint(brand.orange, 0.35),
+  text: onNight.text,
+  textTitle: onNight.text,
+  textDesc: onNight.subtle,
+  textMuted: onNight.muted,
+  iconOrange: brand.orange,
+  accentOrange: brand.orange,
+  green: status.success.night,
 };
 
 export function CockpitGrid() {
@@ -43,9 +45,9 @@ export function CockpitGrid() {
         <h2
           className="text-center font-extrabold"
           style={{
-            fontSize: "clamp(24px, 2.5vw, 28px)",
+            fontSize: "clamp(20px, 2.4vw, 26px)",
             fontWeight: 800,
-            lineHeight: 1.1,
+            lineHeight: 1.15,
             marginBottom: "28px",
             color: PALETTE.textTitle,
             paddingInline: "16px",
@@ -123,7 +125,7 @@ function CockpitCard({
 }) {
   return (
     <div
-      className="flex flex-col border border-white/[0.06] transition-all duration-200 hover:-translate-y-1 hover:border-[#FF7000]/35"
+      className="flex flex-col border border-white/[0.06] transition-all duration-200 hover:-translate-y-1 hover:border-[color:var(--gold-light)]/35"
       style={{
         background: `linear-gradient(180deg, ${PALETTE.cardGradFrom} 0%, ${PALETTE.cardGradTo} 100%)`,
         borderRadius: "10px",
@@ -249,7 +251,7 @@ function WidgetRH() {
               fontSize: "11px",
               fontWeight: 700,
               color: PALETTE.textTitle,
-              lineHeight: 1.1,
+              lineHeight: 1.15,
             }}
           >
             Julie
@@ -279,7 +281,7 @@ function WidgetHACCP() {
         </p>
         <p
           style={{
-            fontSize: "16px",
+            fontSize: "15px",
             fontWeight: 800,
             color: PALETTE.textTitle,
             fontVariantNumeric: "tabular-nums",
@@ -311,7 +313,7 @@ function WidgetPilotage() {
         </p>
         <p
           style={{
-            fontSize: "16px",
+            fontSize: "15px",
             fontWeight: 800,
             color: PALETTE.textTitle,
           }}
@@ -377,7 +379,7 @@ function WidgetReservations() {
 function WidgetStocks() {
   return (
     <div className="flex items-center gap-2.5">
-      <span aria-hidden style={{ fontSize: "22px", lineHeight: 1 }}>
+      <span aria-hidden style={{ fontSize: "22px", lineHeight: 1.05 }}>
         🍅
       </span>
       <div className="flex-1">
@@ -386,7 +388,7 @@ function WidgetStocks() {
             fontSize: "11px",
             fontWeight: 700,
             color: PALETTE.textTitle,
-            lineHeight: 1.1,
+            lineHeight: 1.15,
           }}
         >
           Tomates
@@ -396,7 +398,7 @@ function WidgetStocks() {
           style={{
             fontSize: "9.5px",
             fontWeight: 700,
-            backgroundColor: "rgba(255,112,0,0.18)",
+            backgroundColor: "rgba(226,104,24,0.18)",
             color: PALETTE.accentOrange,
           }}
         >
@@ -416,7 +418,7 @@ function WidgetCompta() {
         </p>
         <p
           style={{
-            fontSize: "16px",
+            fontSize: "15px",
             fontWeight: 800,
             color: PALETTE.textTitle,
             fontVariantNumeric: "tabular-nums",
@@ -468,7 +470,7 @@ function DonutMini() {
         cy="20"
         r={r}
         fill="none"
-        stroke="#5DADE2"
+        stroke="var(--caisse-accent)"
         strokeWidth="5"
         strokeDasharray={`${c * 0.32} ${c}`}
         strokeDashoffset={`${-c * 0.65}`}

@@ -1,3 +1,4 @@
+import { container, gutter, rhythm } from "../lib/spacing";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -42,16 +43,16 @@ export function BlogSearchIntents() {
     <section
       style={{
         backgroundColor: C.bg,
-        paddingBlock: "clamp(48px, 6vw, 72px)",
-        paddingInline: "clamp(20px, 3vw, 40px)",
+        paddingBlock: rhythm.section,
+        paddingInline: gutter,
       }}
     >
-      <div className="mx-auto" style={{ maxWidth: "1280px" }}>
+      <div className="mx-auto" style={{ maxWidth: container }}>
         <h2
           style={{
-            fontSize: "clamp(24px, 3vw, 34px)",
-            lineHeight: 1.1,
-            fontWeight: 850,
+            fontSize: "clamp(24px, 3vw, 32px)",
+            lineHeight: 1.15,
+            fontWeight: 900,
             color: C.text,
             marginBottom: "28px",
           }}
@@ -79,7 +80,7 @@ export function BlogSearchIntents() {
                   width: "44px",
                   height: "44px",
                   background: C.orangeSoft,
-                  color: C.orange,
+                  color: C.orangeOnPaper,
                   marginBottom: "16px",
                 }}
                 aria-hidden
@@ -88,9 +89,9 @@ export function BlogSearchIntents() {
               </span>
               <h3
                 style={{
-                  fontSize: "15.5px",
+                  fontSize: "15px",
                   fontWeight: 800,
-                  lineHeight: 1.3,
+                  lineHeight: 1.25,
                   color: C.text,
                   marginBottom: "10px",
                 }}
@@ -100,7 +101,7 @@ export function BlogSearchIntents() {
               <p
                 style={{
                   fontSize: "13px",
-                  lineHeight: 1.55,
+                  lineHeight: 1.6,
                   color: C.textSubtle,
                   marginBottom: "18px",
                 }}

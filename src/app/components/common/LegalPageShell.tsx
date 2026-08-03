@@ -19,7 +19,7 @@ export function LegalPageShell({
           <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-gold-light">
             Page légale
           </p>
-          <h1 className="mt-2 font-sans text-[clamp(28px,4vw,48px)] font-normal leading-[1.15] tracking-[-0.02em] text-text-primary">
+          <h1 className="mt-2 font-sans text-[clamp(28px,3.8vw,42px)] font-normal leading-[1.15] tracking-[-0.02em] text-text-primary">
             {title}
           </h1>
           <p className="mt-3 text-sm text-text-muted">
