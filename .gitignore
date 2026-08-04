@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# dossier de travail interne — NE PAS COMMITTER SUR CE DEPOT PUBLIC
+# Contient les prix d'achat fournisseur, les marges, la grille tarifaire
+# avant lancement et l'argumentaire commercial.
+/_DOC/
+
+# configuration locale de l'outillage
+/.claude/
